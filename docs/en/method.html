@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Method — What Hangul writes and what it misses</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css"></head><body class="p-method"><header><div class="top"><a class="site" href="index.html">What Hangul writes and what it misses</a><span class="lang"><a href="../ko/method.html">한국어</a><a href="../en/method.html" class="on">English</a></span></div><nav><a href="index.html">Home</a><a href="method.html" class="on">Method</a><a href="results.html">Results</a><a href="table.html">Table</a><a href="record.html">Record</a><a href="limits.html">Limits</a><a href="sources.html">Sources</a></nav></header><main><h1>Method</h1><p class="sub">How the three layers are counted</p><h2>What a row is</h2>
+<p>A row of the table gathers the data that the sources (PHOIBLE, Lexibank, WALS) attach to one Glottolog code. Data attached to a code that Glottolog classifies as a dialect are raised to the row of its language. Of the 3,886 rows, 3,843 are units that Glottolog classifies as languages. 42 are codes that Glottolog classifies as groups of languages (families or subgroups) to which the sources attach data (Albanian, Buriat, Dinka and others; 40 of these are <code class="cat c-partial">partial</code> and 2 are <code class="cat c-syllable">syllable</code>). One row (<code>l1</code>) comes from a PHOIBLE inventory whose code is not in Glottolog, so its name and family are empty. On this site, "language" means one row of this table.</p>
+<h2>1. Reference notation</h2>
+<p>The fixed reference is <a href="https://bowonkwon.github.io/Legal-Language-Handbooks/sejong/">Sejong notation, edition 3.2</a>.</p>
+<ul>
+<li><strong>Letters:</strong> only the shapes on that site's closed list, with no new shapes (the list and its sources are on that site). What this table's computation uses is the consonant shapes of that site's mapping table and the ten Hangul monophthong letters plus ㆍ.</li>
+<li><strong>Syllables:</strong> one onset consonant + a vowel + one final consonant. There are seven finals; in terms of sound, only the codas p, t, k, m, n, ŋ and l can be written as a final.</li>
+<li><strong>Tone:</strong> three side-dot values (none, one dot, two dots) times the presence or absence of a small ㆆ at the end of the syllable, giving six slots.</li>
+</ul>
+<p>A different notation would give different values. This table describes writing <em>with this notation</em>.</p>
+<h2>2. Letter layer</h2>
+<p><strong>Data:</strong> phoneme inventories from <a href="sources.html">PHOIBLE</a>, excluding segments marked marginal. Where a language has several inventories, each is counted separately.</p>
+<p><strong>Consonants.</strong> Each consonant in an inventory is assigned to a slot of the notation.</p>
+<ol>
+<li>A sound listed in the notation's mapping table goes to the slot of its letter. Where s has a plain and a tense (or aspirated) series, the two are first divided between ㅅ and ㅆ; after that, where an inventory has both s and ɕ, an unmarked s that sits in the ㅅ slot is moved to the ᄼ slot.</li>
+<li>The laryngeal series of stops and affricates go to three slots per place of articulation: aspirated, voiced, and voiceless unaspirated. In a language with no voiced series but a tense series (the Korean type), the voiceless unaspirated series takes the voiced slot and the tense series takes the voiceless unaspirated slot. Ejectives go to the voiceless unaspirated slot; breathy-voiced stops and implosives go to the voiced slot.</li>
+<li>Palatalized, labialized, long and prenasalized consonants are treated as written by rule rather than by a separate shape, and are kept distinct.</li>
+<li>A sound absent from the mapping table but listed in the tool's processing table is sent to the nearest slot (retroflex, palatal, uvular and pharyngeal sounds, lateral fricatives, the various r-sounds, and so on). A symbol in neither table counts as having no slot (<code>OTHER</code>).</li>
+<li>Clicks, and sounds whose nearest slot has no shape, have no slot.</li>
+</ol>
+<p><strong>K_c</strong> = the sum over groups of consonants sharing a slot of (group size − 1), plus the number of consonants with no slot. It is the number of consonants listed in the inventory that this classification does not keep apart (fine place diacritics, such as dental versus alveolar, are ignored).</p>
+<p><strong>K_c types.</strong> Each merged group is labeled with its cause. A group with two causes is written <code>LAR+SUB</code>.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LAR</code></td>
+<td>The difference within the group is laryngeal: an ejective, implosive, breathy, tense or creaky sound, or a sound written with a voiceless diacritic, shares a slot with another series</td>
+</tr>
+<tr>
+<td><code>SUB</code></td>
+<td>A sound absent from the mapping table sent to the nearest slot</td>
+</tr>
+<tr>
+<td><code>SAME</code></td>
+<td>Two sounds that the notation assigns to one shape contrast in this language</td>
+</tr>
+<tr>
+<td><code>CLICK</code></td>
+<td>Clicks</td>
+</tr>
+<tr>
+<td><code>NOGLYPH</code></td>
+<td>No shape even in the nearest slot (voiced retroflex affricates)</td>
+</tr>
+<tr>
+<td><code>OTHER</code></td>
+<td>A symbol not covered by the processing tables</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Vowels.</strong> Monophthong qualities are mapped to the ten Hangul monophthong letters and ㆍ. <strong>Diphthongs, non-syllabic vowel elements and symbols outside the processing tables are not counted</strong> (1,950 of the 31,055 vowel segments in PHOIBLE, in 254 languages). <strong>K_v</strong> = the sum over groups of qualities sharing a letter of (group size − 1), plus the number of qualities with no letter. Where two qualities sharing a letter are recorded one only long and the other only short (for example i and ɪː), the pair is counted as a length contrast, not as a merger.</p>
+<p><strong>Vowel features.</strong> The notation has no device for contrasts of length, nasality or phonation (tenseness, tongue root, breathiness and the like). A feature is counted as present if <strong>at least one</strong> inventory of the language records it. Length is recorded when the same quality appears both long and short (or in the case above); nasality and phonation are recorded when at least one vowel carries the mark. The table shows <code>length(1/3)</code>: inventories recording the feature / inventories whose vowels were counted. Only the <code>VF4</code> column (front rounded vowels) is true when at least half of the inventories have them.</p>
+<p><strong>From several inventories to one value.</strong> K_c and K_v are given as the median across inventories with the range (minimum, maximum). The K_c types are those of the single inventory whose K_c is closest to the median (the lower inventory number in a tie).</p>
+<p><strong>Letter-layer condition (<code>letters_ok</code>):</strong> median K_c is 0, median K_v is 0, and no vowel feature.</p>
+<h2>3. Syllable layer</h2>
+<p><strong>Data:</strong> wordlists from <a href="sources.html">Lexibank</a>. For each language, the list with the most sound-transcribed forms among those Lexibank preselects is used. Forms come as segment strings with a syllable-position label for each segment.</p>
+<p><strong>Syllabification.</strong> A glide (j, w and the like) at the end of an onset is not counted as an onset consonant (the position written as in 콰 or 쳐). If a word-medial onset cluster does not occur word-initially in that wordlist, its consonants are passed one at a time, from the left, to the preceding coda, stopping when what remains occurs word-initially or is a single consonant. Codas are stripped of diacritics and replaced by the nearest symbol in the processing table before they are judged (the laryngeal-series rules of the letter layer are not used). A glide in coda position is not counted as a coda consonant.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>S1c</code></td>
+<td>Share of syllables of the form "0–1 onset consonants + nucleus + 0–1 coda consonants, the coda being p, t, k, m, n, ŋ or l"</td>
+</tr>
+<tr>
+<td><code>S1x</code></td>
+<td>Share of syllables of the form "0–2 onset consonants + nucleus + 0–2 coda consonants, any coda". This is a notional frame that allows up to two onset letters and two final letters. Because it accepts any coda, it does not ask whether that consonant could actually be written as a final and kept distinct</td>
+</tr>
+<tr>
+<td><code>S2</code></td>
+<td>Share of syllables with two or more onset consonants</td>
+</tr>
+<tr>
+<td><code>S3</code></td>
+<td>Share of syllables whose onset is a prenasalized consonant</td>
+</tr>
+<tr>
+<td><code>S4a</code></td>
+<td>Share of words whose first syllable has two or more onset consonants (after the syllabification above)</td>
+</tr>
+<tr>
+<td><code>S4b</code></td>
+<td>Share of all words that do not begin with an onset cluster and whose first sound is a prenasalized consonant, ŋ, or l (where the wordlist also has an r-type sound)</td>
+</tr>
+</tbody>
+</table></div>
+<p>The intervals for <code>S1c</code> and <code>S1x</code> are 95% intervals from 2,000 resamples of words.</p>
+<h2>4. Tone layer</h2>
+<p><strong>Data:</strong> tone counts in PHOIBLE inventories (only inventories from the six sources that record tone) and <a href="sources.html">WALS</a> feature 13A (no tones, simple, complex).</p>
+<p>A PHOIBLE inventory with a tone count of 0 cannot tell "no tone" from "not recorded": a considerable share of the inventories of languages that WALS codes as tonal have 0 (<a href="record.html">Record</a>, section 3). Tone is therefore decided in this order.</p>
+<ol>
+<li>If any inventory has a positive tone count, the language is tonal. The median and range of the positive counts are given. Levels are <code>T1</code> for 1–3, <code>T2</code> for 4–6 and <code>T3</code> for 7 or more. If the minimum and the maximum fall in different levels, the level is written as a range such as <code>T1~T2</code>.</li>
+<li>Otherwise, if WALS says "simple", <code>T1</code>; if "complex", <code>T2+</code> (count unknown).</li>
+<li>Otherwise, if WALS says "no tones", <code>T0</code>.</li>
+<li>Otherwise, if all PHOIBLE inventories have 0, <strong><code>T0?</code></strong> — weak evidence that there is no tone.</li>
+<li>Otherwise blank.</li>
+</ol>
+<p>The levels that fit the six tone slots are <code>T1</code>, <code>T2</code> and <code>T1~T2</code>. <code>T0</code> and <code>T0?</code> are treated as needing no tone device. <strong><code>T0?</code> passes without the number of tones being known.</strong> The Cia-Cia row, entered by hand from the literature, did not go through these steps and was set to <code>T0?</code> directly (<a href="limits.html">Limits</a>, section 9).</p>
+<h2>5. Categories</h2>
+<p>Categories other than <code class="cat c-partial">partial</code> are assigned only to languages with values in all three layers. The syllable cutoff θ is 0.95 (applied to values rounded to four decimals); counts at 0.90 and 0.99 are given on the <a href="results.html">Results</a> page.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="cat c-partial">partial</code></td>
+<td>A layer is missing</td>
+</tr>
+<tr>
+<td><code class="cat c-tone-unknown">tone-unknown</code></td>
+<td>Tone is <code>T2+</code></td>
+</tr>
+<tr>
+<td><code class="cat c-tone-range">tone-range</code></td>
+<td>The tone range includes <code>T3</code> (<code>T2~T3</code>, <code>T1~T3</code>)</td>
+</tr>
+<tr>
+<td><code class="cat c-outside">outside</code></td>
+<td><code>S1x</code> &lt; θ, or tone is <code>T3</code></td>
+</tr>
+<tr>
+<td><code class="cat c-syllable">syllable</code></td>
+<td>None of the above, and <code>S1c</code> &lt; θ</td>
+</tr>
+<tr>
+<td><code class="cat c-current">current</code></td>
+<td>None of the above, and the letter-layer condition is met</td>
+</tr>
+<tr>
+<td><code class="cat c-letters">letters</code></td>
+<td>None of the above, and the letter-layer condition is not met</td>
+</tr>
+</tbody>
+</table></div>
+<p>The rules are applied from the top. A category describes which kind of condition applies. A <code class="cat c-syllable">syllable</code> language may also have mergers in the letter layer (see the <code>Kc</code> and <code>Kv</code> columns), and <code class="cat c-letters">letters</code> does not mean "closer to Hangul" than <code class="cat c-syllable">syllable</code>.</p>
+<h2>6. Flags</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>single-inventory</code></td>
+<td>Only one phoneme inventory (for the Cia-Cia row, the one written source counts as one inventory)</td>
+</tr>
+<tr>
+<td><code>small-sample</code></td>
+<td>Fewer than 100 words</td>
+</tr>
+<tr>
+<td><code>tone-unconfirmed</code></td>
+<td>Tone is <code>T0?</code></td>
+</tr>
+<tr>
+<td><code>tone-from-dialects</code></td>
+<td>The evidence for tone comes only from dialect-level data</td>
+</tr>
+<tr>
+<td><code>dialect-merged</code></td>
+<td>Dialect-level data (an inventory, a wordlist or a WALS value) were merged into the language row</td>
+</tr>
+<tr>
+<td><code>handcoded</code></td>
+<td>A row entered by hand from the literature rather than from the public databases (Cia-Cia)</td>
+</tr>
+<tr>
+<td><code>composite-varieties</code></td>
+<td>A row that combines data from different dialects (Cia-Cia)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Dialects are identified by the <a href="sources.html">Glottolog</a> classification. Where a source dataset files a dialect inventory under the language-level code, the flags cannot detect it (<a href="limits.html">Limits</a>, section 5).</p>
+<h2>7. Reproducing</h2>
+<p>The computation tool and instructions for obtaining the source data are in <code>code/</code> and <code>data/SOURCES.md</code> of the <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">repository</a>. The source data are pinned to releases and commits, with file hashes. Running the same tool again reproduces the table byte for byte.</p></main><footer>What Hangul writes and what it misses · Exploratory edition 1 · Built 2026-11-14 · <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a><br>Source data: PHOIBLE, WALS, Lexibank, Glottolog, ABVD (all CC BY 4.0). Text CC BY-NC 4.0; table CC BY 4.0; tool MIT.</footer></body></html>

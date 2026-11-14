@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>표 — 한글로 적으면 무엇이 남고 무엇이 빠지나</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css"></head><body class="p-table"><header><div class="top"><a class="site" href="index.html">한글로 적으면 무엇이 남고 무엇이 빠지나</a><span class="lang"><a href="../ko/table.html" class="on">한국어</a><a href="../en/table.html">English</a></span></div><nav><a href="index.html">첫 면</a><a href="method.html">방법</a><a href="results.html">결과</a><a href="table.html" class="on">표</a><a href="record.html">경과</a><a href="limits.html">한계</a><a href="sources.html">출처</a></nav></header><main><h1>표</h1><p class="sub">3,886행 전체 — 보기와 내려받기</p><p>내려받기: <a href="../data/hangul-conditions-ed1.tsv">hangul-conditions-ed1.tsv</a>(탭 구분, UTF-8, 3,886행 · 34열) · <a href="../data/summary.json">summary.json</a>(갈래별 수와 기준 언어의 행). 표는 CC BY 4.0 이다. 쓸 때는 <a href="sources.html">출처</a>의 원자료 다섯도 함께 밝혀 주기 바란다.</p>
+<p>언어의 이름과 계통은 Glottolog 의 표기 그대로다. 예외가 둘 있다. 문헌에서 직접 입력한 찌아찌아어 행은 이름에 주기가 붙어 있고 계통 칸이 비어 있다. <code>l1</code> 행은 원자료의 코드가 Glottolog 에 없어 이름과 계통이 비어 있다. 또 42행은 Glottolog 가 언어가 아니라 여러 언어의 묶음으로 분류한 코드다(<a href="method.html">방법</a> 「한 행의 단위」). 줄의 순서는 Glottolog 코드의 알파벳 순서이고 다른 뜻이 없다. <strong>값을 읽기 전에 그 줄의 <code>flags</code> 와 <code>T_basis</code> 를 먼저 보기 바란다.</strong></p>
+<div id="tablebox"></div>
+<h2>열 설명</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>열</th>
+<th>뜻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>glottocode</code> · <code>name</code> · <code>family</code></td>
+<td>Glottolog 의 코드 · 이름 · 최상위 계통(비어 있으면 상위 계통이 없는 언어)</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td>갈래. <code class="cat c-current">current</code> · <code class="cat c-letters">letters</code> · <code class="cat c-syllable">syllable</code> · <code class="cat c-outside">outside</code> · <code class="cat c-tone-unknown">tone-unknown</code> · <code class="cat c-tone-range">tone-range</code> · <code class="cat c-partial">partial</code>(<a href="method.html">방법</a> 5)</td>
+</tr>
+<tr>
+<td><code>letters_ok</code></td>
+<td>글자 층의 조건을 충족하는가(K_c · K_v 의 중앙값이 0 이고 모음 자질이 없음)</td>
+</tr>
+<tr>
+<td><code>Kc</code> · <code>Kc_range</code></td>
+<td>자음에서 같은 칸으로 합쳐지거나 칸이 없는 소리의 수 — 목록들의 중앙값과 [최소, 최대]</td>
+</tr>
+<tr>
+<td><code>Kc_types</code></td>
+<td>그 까닭. <code>LAR</code> 후두 계열 · <code>SUB</code> 가까운 칸으로 보냄 · <code>SAME</code> 규약이 한 꼴에 둔 두 소리 · <code>CLICK</code> 흡착음 · <code>NOGLYPH</code> 꼴 없음 · <code>OTHER</code>. 중앙값에 가장 가까운 목록 하나의 것이라 <code>Kc</code> 와 합이 다를 수 있다</td>
+</tr>
+<tr>
+<td><code>Kv</code> · <code>Kv_range</code></td>
+<td>모음 음질에서 합쳐지거나 글자가 없는 것의 수 — 중앙값과 [최소, 최대]</td>
+</tr>
+<tr>
+<td><code>vowel_features</code></td>
+<td>규약에 장치가 없는 모음 대립. <code>length</code> 길이 · <code>nasal</code> 비음 · <code>phonation</code> 발성. 괄호 안은 「그 자질을 적은 목록 수 / 모음을 센 목록 수」</td>
+</tr>
+<tr>
+<td><code>VF4</code></td>
+<td>전설 원순 모음(y · ø 계)이 음운 목록의 절반 이상에 있는가. 규약은 ㅟ · ㅚ 로 적는다</td>
+</tr>
+<tr>
+<td><code>S1c</code> · <code>S1c_ci</code></td>
+<td>현행 음절 틀에 드는 음절의 비율과 95% 구간</td>
+</tr>
+<tr>
+<td><code>S1x</code> · <code>S1x_ci</code></td>
+<td>넓힌 틀(초성 둘 · 끝소리 둘, 끝소리 종류 제한 없음)에 드는 음절의 비율과 95% 구간</td>
+</tr>
+<tr>
+<td><code>S2</code></td>
+<td>초성 자음이 둘 이상인 음절의 비율</td>
+</tr>
+<tr>
+<td><code>S3</code></td>
+<td>앞비음 자음이 초성인 음절의 비율</td>
+</tr>
+<tr>
+<td><code>S4a</code></td>
+<td>첫 음절의 초성 자음이 둘 이상인 낱말의 비율</td>
+</tr>
+<tr>
+<td><code>S4b</code></td>
+<td>전체 낱말 가운데, 초성 연쇄로 시작하지 않으면서 첫소리가 앞비음 자음 · ŋ · l(낱말 목록에 r 류 소리도 있을 때)인 낱말의 비율</td>
+</tr>
+<tr>
+<td><code>forms</code> · <code>syll</code></td>
+<td>낱말 수 · 음절 수</td>
+</tr>
+<tr>
+<td><code>T</code></td>
+<td>성조 수준. <code>T0</code> 없음 · <code>T0?</code> 미확정(성조를 적은 자료가 없음) · <code>T1</code> 1~3 · <code>T2</code> 4~6 · <code>T3</code> 7 이상 · <code>T2+</code> 복잡(수 모름) · <code>T1~T2</code> 따위는 자료마다 다른 범위</td>
+</tr>
+<tr>
+<td><code>tones_med</code> · <code>tones_range</code></td>
+<td>성조 수가 양수인 목록들의 중앙값과 [최소, 최대]</td>
+</tr>
+<tr>
+<td><code>T_basis</code></td>
+<td>성조 값의 근거. <code>phoible+(2/4)</code> 는 성조를 적는 원천의 목록 넷 가운데 둘이 양수라는 뜻. <code>wals</code> · <code>wals none</code> 은 WALS 13A. <code>phoible 0 only</code> 는 0 으로 적은 목록뿐이라는 뜻</td>
+</tr>
+<tr>
+<td><code>T_conflict</code></td>
+<td>PHOIBLE 과 WALS 가 어긋나는 경우</td>
+</tr>
+<tr>
+<td><code>W13A</code> · <code>W12A</code></td>
+<td>WALS 13A(성조: 1 없음 · 2 단순 · 3 복잡) · 12A(음절 구조: 1 단순 · 2 중간 · 3 복잡) 원값</td>
+</tr>
+<tr>
+<td><code>aes</code></td>
+<td>Glottolog 의 위험도(Agglomerated Endangerment Status)</td>
+</tr>
+<tr>
+<td><code>n_inv</code> · <code>sources</code></td>
+<td>PHOIBLE 목록 수와 그 원천의 약호(찌아찌아어 행은 문헌 하나를 1 로 적었다)</td>
+</tr>
+<tr>
+<td><code>lexibank_variety</code></td>
+<td>쓴 Lexibank 낱말 목록의 식별자</td>
+</tr>
+<tr>
+<td><code>flags</code></td>
+<td>표시(<a href="method.html">방법</a> 6)</td>
+</tr>
+</tbody>
+</table></div></main><footer>한글로 적으면 무엇이 남고 무엇이 빠지나 · 탐색판 1 · 생성일 2026-11-14 · <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a><br>원자료: PHOIBLE · WALS · Lexibank · Glottolog · ABVD(모두 CC BY 4.0). 글 CC BY-NC 4.0 · 표 CC BY 4.0 · 도구 MIT.</footer><script src="../assets/table.js"></script></body></html>

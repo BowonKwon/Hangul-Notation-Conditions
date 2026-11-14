@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>한계 — 한글로 적으면 무엇이 남고 무엇이 빠지나</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css"></head><body class="p-limits"><header><div class="top"><a class="site" href="index.html">한글로 적으면 무엇이 남고 무엇이 빠지나</a><span class="lang"><a href="../ko/limits.html" class="on">한국어</a><a href="../en/limits.html">English</a></span></div><nav><a href="index.html">첫 면</a><a href="method.html">방법</a><a href="results.html">결과</a><a href="table.html">표</a><a href="record.html">경과</a><a href="limits.html" class="on">한계</a><a href="sources.html">출처</a></nav></header><main><h1>한계</h1><p class="sub">이 표로 말할 수 없는 것</p><h2>1. 형식만 쟀다</h2>
+<p>이 표가 센 것은 글자와 소리의 대응이다. 다음은 재지 않았다.</p>
+<ul>
+<li>읽고 쓰기를 배우기가 쉬운가.</li>
+<li>그 말을 쓰는 사람들이 그 표기를 원하는가, 받아들이는가.</li>
+<li>이미 읽고 쓰는 문자가 있는가, 학교와 나라가 어떤 문자를 쓰는가.</li>
+<li>글꼴과 입력 수단이 있는가.</li>
+</ul>
+<p>조건을 충족한다는 것이 그 언어를 한글로 적는 것이 알맞다거나 유익하다는 뜻은 아니며, 그렇게 하라는 권고도 아니다. 한글 표기가 실제로 쓰인 찌아찌아어의 경과는 <a href="https://bowonkwon.github.io/Legal-Language-Handbooks/sejong/geokkuro.html">세종 표기 사이트의 「다른 언어를 한글로」 면</a>에 정리되어 있다.</p>
+<h2>2. 추상 조건 검사다</h2>
+<ul>
+<li><strong>음절.</strong> <code class="cat c-current">current</code> · <code class="cat c-letters">letters</code> 는 <code>S1c</code> 가 0.95 이상이라는 뜻이다. 낱말 목록의 음절 가운데 약 5%까지는 틀 밖이어도 통과한다(기준을 0.90 · 0.99 로 잡으면 약 10% · 1%).</li>
+<li><strong>성조.</strong> 성조의 수가 여섯 이하인지만 보았다. 성조가 미확정(<code>T0?</code>)인 언어는 수를 모르는 채 통과시켰다. 방점은 높낮이를 적는 장치다. 오르내리는 성조나 발성이 얹힌 성조를 여섯 칸에 어떻게 나눠 적을지는 보지 않았다. 세종 표기 판 3.2 의 중국어 기본 표기는 1성과 4성을 같은 방점(한 점)으로 적고 성조 번호를 표의 옆 칸에 따로 둔다 — 수가 여섯 이하여도 실제 배정이 성조를 하나씩 가르지 않을 수 있다.</li>
+<li><strong>글자.</strong> K_c · K_v 는 이 분류에서 같은 칸으로 합쳐지거나 칸이 없는 소리의 수다. 그 수만큼 글자를 더하면 된다는 증명이 아니다. 대응표에 없는 소리를 「가장 가까운 칸」으로 보낸 배정이 음성학적으로 옳은지도 따로 검증하지 않았다.</li>
+<li>적은 글자열을 다시 읽어 소리가 되살아나는지(가역성)는 검사하지 않았다.</li>
+</ul>
+<h2>3. 자료가 적지 않은 것은 표에 없다</h2>
+<p>음운 목록은 여러 연구자의 기술을 모은 2차 자료이고, 목록마다 적는 범위가 다르다.</p>
+<ul>
+<li><strong>모음 자질.</strong> 어느 목록도 그 대립을 적지 않았으면 표에는 자질이 없다고 나온다. 빈칸은 「없음」이 아니라 「자료에 없음」이다.</li>
+<li><strong>성조.</strong> <code>T0?</code> 는 성조가 없다는 뜻도, 여섯 이하라는 뜻도 아니다. 갈래가 정해진 712개 언어 가운데 244개가 <code>T0?</code> 다. 보기 하나: 하이냐호 보조어(Hainyaxo Bozo)는 표에서 <code>T0?</code> 로 나오지만, 이 언어의 문법서는 어휘의 성조 높이 둘(고 · 저 — 음절에는 하강 · 상승 굴곡도 나타난다)과 모음의 장단 · 비모음 대립을 기술한다(Heath 2023: 7–8, 18).</li>
+<li><strong>계산이 세지 않는 것도 있다.</strong> 이중모음과 음절을 이루지 않는 모음 요소는 모음 층에서 빠진다(모음 분절의 6%, 254개 언어). 자음의 조음 위치 세부 부호는 무시한다. 원자료에 적혀 있어도 이 표에는 반영되지 않는 것들이다.</li>
+<li>한 목록이 그 언어 전체를 대표하지 않는다. 갈래가 정해진 언어의 절반 넘게(379/712) 목록이 하나뿐이다.</li>
+</ul>
+<h2>4. 성조의 수는 분석에 따라 다르다</h2>
+<p>같은 언어의 성조를 자료마다 다르게 센다. 베트남어는 여섯과 여덟, 하우사어는 셋과 넷으로 세는 목록이 함께 있다. 이 표는 그 범위를 그대로 적었고(<code>tones_range</code>), 여섯과 일곱의 경계에 걸치면 갈래를 정하지 않았다. 수가 같아도 무엇을 성조로 세었는지는 목록마다 다를 수 있다.</p>
+<h2>5. 방언의 자료가 언어의 행에 합쳐진다</h2>
+<p>Glottolog 가 방언으로 분류한 자료는 그 언어의 행으로 올렸다. 그래서 한 행의 음운 목록 · 낱말 목록 · 성조 값이 서로 다른 변종에서 올 수 있다. 204행에 <code>dialect-merged</code> 표시가 있다.</p>
+<p>표시로 가려내지 못하는 경우가 있다. 원자료가 방언의 목록을 처음부터 언어 단위의 코드로 올려 둔 경우다. 네덜란드어의 행이 성조 언어(<code>T1</code>)로 나오는 것은 성조를 적은 두 목록이 방언(하셀트 · 마스트리흐트)의 것이기 때문인데, 이 행에는 표시가 붙지 않았다. <strong>표시가 없다고 방언 자료가 섞이지 않은 것은 아니다.</strong></p>
+<p>거꾸로, Glottolog 가 여러 언어의 묶음으로 분류한 코드에 자료가 붙어 한 행이 된 것이 42행 있고, Glottolog 에 연결되지 않은 행이 하나 있다(<a href="method.html">방법</a> 「한 행의 단위」).</p>
+<h2>6. 낱말 목록은 작고 고르지 않다</h2>
+<p>음절 층은 기초 어휘 목록에서 센 것이다. 낱말이 100개 미만인 언어가 217개다. 기초 어휘는 실제 글의 음절 빈도를 대표하지 않는다. 음절을 나누는 규칙(<a href="method.html">방법</a> 3)도 한 가지 선택이다.</p>
+<h2>7. 규약과 「넓힌 틀」은 선택이다</h2>
+<p>닫힌 목록의 꼴 · 받침 일곱 · 방점 여섯 칸은 세종 표기 판 3.2 의 선택이고, 「초성 둘 · 끝소리 둘」을 넓힌 틀로 본 것은 이 표의 선택이다. 다르게 잡으면 갈래가 달라진다. 넓힌 틀은 이 표본의 거의 모든 언어를 받아들여(<code>S1x</code> 가 0.95 미만인 언어는 갈래가 정해진 것 가운데 3개) 가르는 힘이 약하다. 끝소리의 종류를 가리지 않는 가상의 틀이기도 하다.</p>
+<h2>8. 갈래의 수는 기준에 민감하다</h2>
+<p>음절 기준을 0.90 에서 0.99 로 옮기면 <code class="cat c-current">current</code> 는 64에서 24로, <code class="cat c-letters">letters</code> 는 300에서 69로 바뀐다. 갈래의 수는 기준과 함께 인용해야 뜻이 통한다.</p>
+<h2>9. 찌아찌아어의 행</h2>
+<p>찌아찌아어는 PHOIBLE · WALS · Lexibank 에 없어 문헌에서 직접 입력했다. 자음 · 모음은 Havens(2024)의 표 9(바하리 방언), 낱말은 ABVD 의 와삼부아 방언 목록이다. 한글 표기가 쓰인 소라월리오 방언을 직접 잰 것이 아니다. 성조는 <code>T0?</code> 다 — Havens(2024: 60)는 강세가 끝에서 둘째 음절에 온다고 기술하지만 성조가 없다고 쓰지는 않았다.</p>
+<h2>10. 표가 닿지 않는 언어</h2>
+<p>전체 3,886행 가운데 갈래가 정해진 것은 712행(18%)이다. 나머지 3,174행 가운데 3,157행은 음운 목록이나 낱말 목록, 성조 값 가운데 하나 이상이 없고, 17행은 세 층이 다 있지만 성조의 수 때문에 갈래를 정하지 않았다. 자료가 없는 언어가 조건을 충족하지 못한다는 뜻이 아니다.</p>
+<h2>11. 미리 정한 검정을 넘지 못했다</h2>
+<p>이 표는 계산 전에 적어 둔 검정을 넘지 못한 뒤, 결과를 본 상태에서 고친 판이다(<a href="record.html">경과</a>). 고칠 때마다 예상을 먼저 적었지만, 정의를 결과에 맞춰 손보았을 가능성을 없앨 수는 없다.</p></main><footer>한글로 적으면 무엇이 남고 무엇이 빠지나 · 탐색판 1 · 생성일 2026-11-14 · <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a><br>원자료: PHOIBLE · WALS · Lexibank · Glottolog · ABVD(모두 CC BY 4.0). 글 CC BY-NC 4.0 · 표 CC BY 4.0 · 도구 MIT.</footer></body></html>

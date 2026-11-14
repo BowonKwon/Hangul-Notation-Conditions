@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Table — What Hangul writes and what it misses</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css"></head><body class="p-table"><header><div class="top"><a class="site" href="index.html">What Hangul writes and what it misses</a><span class="lang"><a href="../ko/table.html">한국어</a><a href="../en/table.html" class="on">English</a></span></div><nav><a href="index.html">Home</a><a href="method.html">Method</a><a href="results.html">Results</a><a href="table.html" class="on">Table</a><a href="record.html">Record</a><a href="limits.html">Limits</a><a href="sources.html">Sources</a></nav></header><main><h1>Table</h1><p class="sub">All 3,886 rows — view and download</p><p>Download: <a href="../data/hangul-conditions-ed1.tsv">hangul-conditions-ed1.tsv</a> (tab-separated, UTF-8, 3,886 rows, 34 columns) · <a href="../data/summary.json">summary.json</a> (counts by category and the rows of the reference languages). The table is CC BY 4.0. When you use it, please also credit the five source datasets listed under <a href="sources.html">Sources</a>.</p>
+<p>Language names and families are as given by Glottolog. There are two exceptions. The Cia-Cia row, entered by hand from the literature, has a note in its name and an empty family cell. The <code>l1</code> row comes from a source code that is not in Glottolog, so its name and family are empty. In addition, 42 rows are codes that Glottolog classifies as groups of languages rather than languages (<a href="method.html">Method</a>, "What a row is"). Rows are in alphabetical order of Glottolog code; the order means nothing else. <strong>Before reading a value, look at the <code>flags</code> and <code>T_basis</code> of that row.</strong></p>
+<div id="tablebox"></div>
+<h2>Column guide</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>glottocode</code>, <code>name</code>, <code>family</code></td>
+<td>Glottolog code, name and top-level family (empty for languages with no higher family)</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td><code class="cat c-current">current</code>, <code class="cat c-letters">letters</code>, <code class="cat c-syllable">syllable</code>, <code class="cat c-outside">outside</code>, <code class="cat c-tone-unknown">tone-unknown</code>, <code class="cat c-tone-range">tone-range</code>, <code class="cat c-partial">partial</code> (<a href="method.html">Method</a>, section 5)</td>
+</tr>
+<tr>
+<td><code>letters_ok</code></td>
+<td>Whether the letter-layer condition is met (median K_c and K_v of 0 and no vowel feature)</td>
+</tr>
+<tr>
+<td><code>Kc</code>, <code>Kc_range</code></td>
+<td>Number of consonants that merge into a shared slot or have no slot — median across inventories and [minimum, maximum]</td>
+</tr>
+<tr>
+<td><code>Kc_types</code></td>
+<td>The causes: <code>LAR</code> laryngeal series, <code>SUB</code> sent to the nearest slot, <code>SAME</code> two sounds the notation gives one shape, <code>CLICK</code> clicks, <code>NOGLYPH</code> no shape, <code>OTHER</code>. These are from the single inventory closest to the median, so they need not add up to <code>Kc</code></td>
+</tr>
+<tr>
+<td><code>Kv</code>, <code>Kv_range</code></td>
+<td>Number of vowel qualities that merge or have no letter — median and [minimum, maximum]</td>
+</tr>
+<tr>
+<td><code>vowel_features</code></td>
+<td>Vowel contrasts the notation has no device for: <code>length</code>, <code>nasal</code>, <code>phonation</code>. In parentheses: inventories recording the feature / inventories whose vowels were counted</td>
+</tr>
+<tr>
+<td><code>VF4</code></td>
+<td>Whether at least half of the inventories have front rounded vowels (the y and ø series), which the notation writes with ㅟ and ㅚ</td>
+</tr>
+<tr>
+<td><code>S1c</code>, <code>S1c_ci</code></td>
+<td>Share of syllables that fit the current syllable frame, with a 95% interval</td>
+</tr>
+<tr>
+<td><code>S1x</code>, <code>S1x_ci</code></td>
+<td>Share of syllables that fit the widened frame (two onset consonants, two coda consonants, any coda), with a 95% interval</td>
+</tr>
+<tr>
+<td><code>S2</code></td>
+<td>Share of syllables with two or more onset consonants</td>
+</tr>
+<tr>
+<td><code>S3</code></td>
+<td>Share of syllables whose onset is a prenasalized consonant</td>
+</tr>
+<tr>
+<td><code>S4a</code></td>
+<td>Share of words whose first syllable has two or more onset consonants</td>
+</tr>
+<tr>
+<td><code>S4b</code></td>
+<td>Share of all words that do not begin with an onset cluster and whose first sound is a prenasalized consonant, ŋ, or l (where the wordlist also has an r-type sound)</td>
+</tr>
+<tr>
+<td><code>forms</code>, <code>syll</code></td>
+<td>Number of words and of syllables</td>
+</tr>
+<tr>
+<td><code>T</code></td>
+<td>Tone level: <code>T0</code> none, <code>T0?</code> unconfirmed (no source records tone), <code>T1</code> 1–3, <code>T2</code> 4–6, <code>T3</code> 7 or more, <code>T2+</code> complex with unknown count; <code>T1~T2</code> and the like are ranges where sources differ</td>
+</tr>
+<tr>
+<td><code>tones_med</code>, <code>tones_range</code></td>
+<td>Median and [minimum, maximum] of the positive tone counts</td>
+</tr>
+<tr>
+<td><code>T_basis</code></td>
+<td>Basis of the tone value. <code>phoible+(2/4)</code> means two of four inventories from tone-recording sources have a positive count; <code>wals</code> and <code>wals none</code> refer to WALS 13A; <code>phoible 0 only</code> means only inventories with a count of 0</td>
+</tr>
+<tr>
+<td><code>T_conflict</code></td>
+<td>Cases where PHOIBLE and WALS disagree</td>
+</tr>
+<tr>
+<td><code>W13A</code>, <code>W12A</code></td>
+<td>Raw WALS values for 13A (tone: 1 none, 2 simple, 3 complex) and 12A (syllable structure: 1 simple, 2 moderately complex, 3 complex)</td>
+</tr>
+<tr>
+<td><code>aes</code></td>
+<td>Glottolog's Agglomerated Endangerment Status</td>
+</tr>
+<tr>
+<td><code>n_inv</code>, <code>sources</code></td>
+<td>Number of PHOIBLE inventories and the abbreviations of their sources (for the Cia-Cia row, the one written source is entered as 1)</td>
+</tr>
+<tr>
+<td><code>lexibank_variety</code></td>
+<td>Identifier of the Lexibank wordlist used</td>
+</tr>
+<tr>
+<td><code>flags</code></td>
+<td>Flags (<a href="method.html">Method</a>, section 6)</td>
+</tr>
+</tbody>
+</table></div></main><footer>What Hangul writes and what it misses · Exploratory edition 1 · Built 2026-11-14 · <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a><br>Source data: PHOIBLE, WALS, Lexibank, Glottolog, ABVD (all CC BY 4.0). Text CC BY-NC 4.0; table CC BY 4.0; tool MIT.</footer><script src="../assets/table.js"></script></body></html>

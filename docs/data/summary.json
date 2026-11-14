@@ -1,0 +1,422 @@
+{
+ "n_rows": 3886,
+ "categories_by_theta": {
+  "0.9": {
+   "letters": 300,
+   "syllable": 341,
+   "tone-range": 3,
+   "partial": 3157,
+   "current": 64,
+   "outside": 7,
+   "tone-unknown": 14
+  },
+  "0.95": {
+   "letters": 198,
+   "syllable": 456,
+   "tone-range": 3,
+   "partial": 3157,
+   "current": 48,
+   "outside": 10,
+   "tone-unknown": 14
+  },
+  "0.99": {
+   "syllable": 566,
+   "outside": 53,
+   "tone-range": 3,
+   "letters": 69,
+   "partial": 3157,
+   "current": 24,
+   "tone-unknown": 14
+  }
+ },
+ "layers": {
+  "letters": 2087,
+  "syllable": 2888,
+  "tone": 1502
+ },
+ "tone_levels": {
+  "T0": 299,
+  "T1": 428,
+  "T0?": 522,
+  "T2~T3": 3,
+  "T2": 173,
+  "T1~T2": 19,
+  "T3": 14,
+  "": 2384,
+  "T2+": 43,
+  "T1~T3": 1
+ },
+ "bench_rows": {
+  "cia": {
+   "glottocode": "ciac1237",
+   "name": "Cia-Cia (수기: Havens 표 9 + ABVD 와삼부아)",
+   "category": "letters",
+   "letters_ok": false,
+   "Kc": 3,
+   "Kc_range": [
+    3,
+    3
+   ],
+   "Kc_types": "LAR:3",
+   "Kv": 0,
+   "Kv_range": [
+    0,
+    0
+   ],
+   "vowel_features": "",
+   "VF4": false,
+   "S1c": 1.0,
+   "S1c_ci": [
+    1.0,
+    1.0
+   ],
+   "S1x": 1.0,
+   "S1x_ci": [
+    1.0,
+    1.0
+   ],
+   "S2": 0.0,
+   "S3": 0.0693,
+   "S4a": 0.0,
+   "S4b": 0.0762,
+   "forms": 223,
+   "syll": 592,
+   "T": "T0?",
+   "T_basis": "Havens 2024: stress described, tone not mentioned (inferred)",
+   "n_inv": 1,
+   "sources": "Havens2024",
+   "flags": "tone-unconfirmed;single-inventory;handcoded;composite-varieties"
+  },
+  "vie": {
+   "glottocode": "viet1252",
+   "name": "Vietnamese",
+   "family": "Austroasiatic",
+   "category": "tone-range",
+   "letters_ok": false,
+   "Kc": 0.0,
+   "Kc_range": [
+    0,
+    0
+   ],
+   "Kc_types": "",
+   "Kv": 0.5,
+   "Kv_range": [
+    0,
+    2
+   ],
+   "vowel_features": "length(3/4)",
+   "VF4": false,
+   "S1c": 1.0,
+   "S1c_ci": [
+    1.0,
+    1.0
+   ],
+   "S1x": 1.0,
+   "S1x_ci": [
+    1.0,
+    1.0
+   ],
+   "S2": 0.0,
+   "S3": 0.0,
+   "S4a": 0.0,
+   "S4b": 0.0935,
+   "forms": 1530,
+   "syll": 2269,
+   "T": "T2~T3",
+   "tones_med": 7.0,
+   "tones_range": [
+    6,
+    8
+   ],
+   "T_basis": "phoible+(2/2)",
+   "W13A": "3",
+   "W12A": "2",
+   "aes": "not_endangered",
+   "n_inv": 4,
+   "sources": "EA;SPA;UPSID;UZ",
+   "lexibank_variety": "wold-Vietnamese",
+   "flags": ""
+  },
+  "cmn": {
+   "glottocode": "mand1415",
+   "name": "Mandarin Chinese",
+   "family": "Sino-Tibetan",
+   "category": "letters",
+   "letters_ok": false,
+   "Kc": 1.0,
+   "Kc_range": [
+    0,
+    3
+   ],
+   "Kc_types": "",
+   "Kv": 1.0,
+   "Kv_range": [
+    1,
+    2
+   ],
+   "vowel_features": "nasal(1/4);phonation(2/4)",
+   "VF4": true,
+   "S1c": 0.9961,
+   "S1c_ci": [
+    0.9942,
+    0.9978
+   ],
+   "S1x": 1.0,
+   "S1x_ci": [
+    1.0,
+    1.0
+   ],
+   "S2": 0.0,
+   "S3": 0.0,
+   "S4a": 0.0,
+   "S4b": 0.0,
+   "forms": 2114,
+   "syll": 4127,
+   "T": "T2",
+   "tones_med": 4.0,
+   "tones_range": [
+    4,
+    4
+   ],
+   "T_basis": "phoible+(2/2)",
+   "W13A": "3",
+   "W12A": "2",
+   "aes": "not_endangered",
+   "n_inv": 4,
+   "sources": "EA;PH;SPA;UPSID",
+   "lexibank_variety": "wold-MandarinChinese",
+   "flags": ""
+  },
+  "spa": {
+   "glottocode": "stan1288",
+   "name": "Spanish",
+   "family": "Indo-European",
+   "category": "syllable",
+   "letters_ok": true,
+   "Kc": 0,
+   "Kc_range": [
+    0,
+    0
+   ],
+   "Kc_types": "",
+   "Kv": 0,
+   "Kv_range": [
+    0,
+    1
+   ],
+   "vowel_features": "",
+   "VF4": false,
+   "S1c": 0.7362,
+   "S1c_ci": [
+    0.7234,
+    0.7494
+   ],
+   "S1x": 1.0,
+   "S1x_ci": [
+    1.0,
+    1.0
+   ],
+   "S2": 0.0523,
+   "S3": 0.0,
+   "S4a": 0.0752,
+   "S4b": 0.0356,
+   "forms": 1769,
+   "syll": 4761,
+   "T": "T0",
+   "T_basis": "wals none + phoible 0(2)",
+   "W13A": "1",
+   "W12A": "2",
+   "aes": "not_endangered",
+   "n_inv": 5,
+   "sources": "EA;SPA;UPSID;UZ",
+   "lexibank_variety": "keypano-Spanish",
+   "flags": ""
+  },
+  "rus": {
+   "glottocode": "russ1263",
+   "name": "Russian",
+   "family": "Indo-European",
+   "category": "syllable",
+   "letters_ok": true,
+   "Kc": 0,
+   "Kc_range": [
+    0,
+    0
+   ],
+   "Kc_types": "",
+   "Kv": 0,
+   "Kv_range": [
+    0,
+    0
+   ],
+   "vowel_features": "",
+   "VF4": false,
+   "S1c": 0.7322,
+   "S1c_ci": [
+    0.7139,
+    0.7497
+   ],
+   "S1x": 0.9912,
+   "S1x_ci": [
+    0.9871,
+    0.9949
+   ],
+   "S2": 0.1514,
+   "S3": 0.0,
+   "S4a": 0.2359,
+   "S4b": 0.0421,
+   "forms": 975,
+   "syll": 2147,
+   "T": "T0",
+   "T_basis": "wals none + phoible 0(1)",
+   "W13A": "1",
+   "W12A": "3",
+   "aes": "not_endangered",
+   "n_inv": 3,
+   "sources": "EA;SPA;UPSID",
+   "lexibank_variety": "northeuralex-rus",
+   "flags": ""
+  },
+  "kor": {
+   "glottocode": "kore1280",
+   "name": "Korean",
+   "family": "Koreanic",
+   "category": "letters",
+   "letters_ok": false,
+   "Kc": 0.0,
+   "Kc_range": [
+    0,
+    0
+   ],
+   "Kc_types": "",
+   "Kv": 0.0,
+   "Kv_range": [
+    0,
+    0
+   ],
+   "vowel_features": "length(3/4)",
+   "VF4": true,
+   "S1c": 0.9642,
+   "S1c_ci": [
+    0.9567,
+    0.9711
+   ],
+   "S1x": 0.9996,
+   "S1x_ci": [
+    0.9987,
+    1.0
+   ],
+   "S2": 0.0183,
+   "S3": 0.0,
+   "S4a": 0.0444,
+   "S4b": 0.0,
+   "forms": 968,
+   "syll": 2400,
+   "T": "T0",
+   "T_basis": "wals none + phoible 0(2)",
+   "W13A": "1",
+   "W12A": "2",
+   "aes": "not_endangered",
+   "n_inv": 4,
+   "sources": "EA;SPA;UPSID;UZ",
+   "lexibank_variety": "northeuralex-kor",
+   "flags": ""
+  }
+ },
+ "controls": [
+  "abkh1244",
+  "hadz1240"
+ ],
+ "control_rows": {
+  "abkh1244": {
+   "glottocode": "abkh1244",
+   "name": "Abkhaz",
+   "family": "Abkhaz-Adyge",
+   "category": "syllable",
+   "letters_ok": false,
+   "Kc": 14.0,
+   "Kc_range": [
+    10,
+    18
+   ],
+   "Kc_types": "LAR:1;LAR+SUB:3;NOGLYPH:1;SAME:2;SUB:3",
+   "Kv": 0.0,
+   "Kv_range": [
+    0,
+    0
+   ],
+   "vowel_features": "length(2/2)",
+   "VF4": false,
+   "S1c": 0.8538,
+   "S1c_ci": [
+    0.8422,
+    0.8651
+   ],
+   "S1x": 0.9991,
+   "S1x_ci": [
+    0.998,
+    1.0
+   ],
+   "S2": 0.0094,
+   "S3": 0.0,
+   "S4a": 0.0239,
+   "S4b": 0.001,
+   "forms": 1047,
+   "syll": 3407,
+   "T": "T0",
+   "T_basis": "wals none",
+   "W13A": "1",
+   "W12A": "3",
+   "aes": "threatened",
+   "n_inv": 2,
+   "sources": "EA",
+   "lexibank_variety": "northeuralex-abk",
+   "flags": ""
+  },
+  "hadz1240": {
+   "glottocode": "hadz1240",
+   "name": "Hadza",
+   "family": "",
+   "category": "syllable",
+   "letters_ok": false,
+   "Kc": 21,
+   "Kc_range": [
+    21,
+    21
+   ],
+   "Kc_types": "CLICK:12;LAR:5;LAR+SUB:4",
+   "Kv": 0,
+   "Kv_range": [
+    0,
+    0
+   ],
+   "vowel_features": "",
+   "VF4": false,
+   "S1c": 0.9176,
+   "S1c_ci": [
+    0.8916,
+    0.9404
+   ],
+   "S1x": 0.9978,
+   "S1x_ci": [
+    0.9933,
+    1.0
+   ],
+   "S2": 0.0738,
+   "S3": 0.0217,
+   "S4a": 0.1465,
+   "S4b": 0.0404,
+   "forms": 198,
+   "syll": 461,
+   "T": "T1",
+   "T_basis": "wals",
+   "W13A": "2",
+   "W12A": "1",
+   "aes": "shifting",
+   "n_inv": 1,
+   "sources": "UPSID",
+   "lexibank_variety": "johanssonsoundsymbolic-Hadza",
+   "flags": "single-inventory"
+  }
+ }
+}

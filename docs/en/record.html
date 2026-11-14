@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Record — What Hangul writes and what it misses</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css"></head><body class="p-record"><header><div class="top"><a class="site" href="index.html">What Hangul writes and what it misses</a><span class="lang"><a href="../ko/record.html">한국어</a><a href="../en/record.html" class="on">English</a></span></div><nav><a href="index.html">Home</a><a href="method.html">Method</a><a href="results.html">Results</a><a href="table.html">Table</a><a href="record.html" class="on">Record</a><a href="limits.html">Limits</a><a href="sources.html">Sources</a></nav></header><main><h1>Record</h1><p class="sub">The predictions written in advance, the test that failed, and what was changed afterwards</p><p>This table is not the outcome of the original plan. The planned test failed, and the table was then changed four times with earlier results already seen. What was changed, and when, is set out here in order.</p>
+<h2>1. What was written down before computing</h2>
+<p>Before any computation, the following were written down and fixed with file hashes.</p>
+<ul>
+<li>The definitions and formulas of the measures, and the releases of the data to be used.</li>
+<li><strong>Fourteen predictions about languages whose behavior is already known.</strong> For the languages Sejong notation already covers (Spanish, Russian, Mandarin Chinese, Vietnamese), for Cia-Cia, where a Hangul orthography has actually been used, and for Korean, the document stated what values should come out if the measures work as intended. Two languages expected to be far from Hangul (controls) were to be picked by a rule.</li>
+<li><strong>The bar:</strong> at least twelve of the fourteen correct, including the prediction about Korean (number 13).</li>
+<li><strong>The rule for failure:</strong> the definitions may be revised once and the computation rerun. If the second run also fails, the full table is not reported as a result.</li>
+</ul>
+<h2>2. The fourteen predictions and the two runs</h2>
+<p>"On the list" means meeting the definition used at that stage: syllable, consonant and vowel values each in the top third of all languages, six or fewer tones, and at most two consonant mergers. The exploratory edition does not use this definition.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Prediction</th>
+<th>First run</th>
+<th>Second run</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Cia-Cia's syllable-frame fit is in the top third, both as defined and when glides are counted separately</td>
+<td>held</td>
+<td>held</td>
+</tr>
+<tr>
+<td>2</td>
+<td>S4b (glossed at the time as "the share of words needing an extra initial syllable"; for today's definition see <a href="method.html">Method</a>, section 3) is highest in Cia-Cia among the five languages</td>
+<td>failed</td>
+<td>failed (Cia-Cia 0.076, Vietnamese 0.094)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Cia-Cia has two or more consonant mergers</td>
+<td>held</td>
+<td>held (3)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cia-Cia is on the list</td>
+<td>failed</td>
+<td>failed (3 consonant mergers)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Vietnamese: syllable-frame fit in the top third, onset clusters at most 2%, and the largest gap among the five when glides are counted separately</td>
+<td>failed</td>
+<td>held</td>
+</tr>
+<tr>
+<td>6</td>
+<td>A vowel length contrast is detected in Vietnamese</td>
+<td>held</td>
+<td>held</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Vietnamese has four to six tones</td>
+<td>held</td>
+<td>held</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Mandarin has four to six tones</td>
+<td>held</td>
+<td>held</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Mandarin has no consonant mergers</td>
+<td>failed</td>
+<td>failed (median 1)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Syllable-frame fit: Vietnamese and Mandarin &gt; Spanish &gt; Russian</td>
+<td>failed</td>
+<td>held</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Russian has the lowest syllable-frame fit and the most onset clusters of the five</td>
+<td>failed</td>
+<td>held</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Russian has no consonant mergers</td>
+<td>held</td>
+<td>held</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Korean is in the top tenth for syllable, consonant and vowel values and has no tone</td>
+<td>failed</td>
+<td>failed (syllable-frame fit 0.964 against a cutoff of 0.998)</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Both controls are off the list</td>
+<td>held</td>
+<td>held</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>Held</strong></td>
+<td><strong>7</strong></td>
+<td><strong>10</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Both runs fell short of the bar of twelve.</p>
+<p><strong>Four definitions revised after the first run.</strong> Consonant + glide sequences such as "kwa" had been counted as onset clusters; coda allophones had not been replaced by their nearest slot; the rule "a word-medial cluster counts as an onset only if it occurs word-initially" had been left out; and vowel pairs differing only in length had been counted as mergers of quality. The three predictions that newly held in the second run (5, 10 and 11) were affected by these revisions.</p>
+<p><strong>The four that failed to the end.</strong> Predictions 2 and 4 were wrong expectations about Cia-Cia. Prediction 9 failed because some Mandarin inventories list two similar affricate series side by side. Prediction 13 set a "top tenth" cutoff without knowing the distribution of syllable-frame fit: in this sample that region was taken by languages in which almost every syllable fits the frame.</p>
+<p>In the second run, 95 of the 715 languages that could be judged (the 729 with values on all three axes, less 14 whose number of tones is unknown) were on the list. Under the rule, this was not reported as a result.</p>
+<h2>3. Toward the exploratory edition — four rounds of changes</h2>
+<p>Known defects were then fixed and the way of describing the outcome was changed. In each round, what would be changed and what values were expected were written down before computing. <strong>Every round was made after seeing earlier results.</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Version</th>
+<th>What changed</th>
+<th>Expectations written in advance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x1</td>
+<td>Tone count 0 treated as missing; quantile cutoffs and the "list" dropped in favor of layer-by-layer description and categories; vowel features included in the condition; widened syllable frame</td>
+<td>9 of 10 held</td>
+</tr>
+<tr>
+<td>x1a</td>
+<td>Tone written as a range where sources differ</td>
+<td>4 of 4</td>
+</tr>
+<tr>
+<td>x1b</td>
+<td>First independent verification — handling of ç, all causes of a merger recorded, sounds with no shape, vowel features counted if any inventory records them, flags added, categories renamed</td>
+<td>5 of 6</td>
+</tr>
+<tr>
+<td>x1c (exploratory edition 1)</td>
+<td>Second independent verification — dialect flags extended to all three data sources, Cia-Cia's tone set to unconfirmed</td>
+<td>4 of 4</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>x1 — a tone count of 0 did not mean "none".</strong> At first, the smallest tone count among a language's inventories was used. But among the inventories of languages that WALS codes as tonal, the share with a tone count of 0 ranged from 8% to 44% depending on the source (AA 8 of 30, PH 4 of 9, GM 2 of 24, SPA 4 of 52, UZ 2 of 13). In the other direction, inventories of languages WALS codes as having no tones recorded tone in 4 of 198 cases. So "tone present" is accepted and "0" is treated as missing. Hausa, Yoruba and Igbo had come out as languages without tone; this change corrected that. The one expectation that failed was Vietnamese.</p>
+<p><strong>x1a — Vietnamese.</strong> Two inventories count the tones of Vietnamese as six and as eight. The median of 7 exceeded the six slots and Vietnamese came out as <code class="cat c-outside">outside</code>. The problem was summarizing two different analyses in one number, so where the levels differ the tone is now written as a range, and no category is assigned when the range crosses the boundary.</p>
+<p><strong>x1b — defects found by independent verification.</strong></p>
+<ul>
+<li>The tool was reading ç as c (the diacritic was lost when characters were decomposed). 185 languages have ç in an inventory, and this defect alone changed K_c in 49 languages. <strong>The defect had been there since the first run.</strong></li>
+<li>Sounds with no shape in the notation, such as voiced retroflex affricates (five distinct symbols, 67 occurrences across inventories, 37 languages), were being counted as contrasts that are written.</li>
+<li>Vowel features were recognized only when at least half of the inventories recorded them, which dropped the length contrast of languages such as Japanese and Finnish, where one inventory in three records length. Features dropped this way: length in 38 languages, nasality in 13, phonation in 10.</li>
+<li>In the causes of mergers, a laryngeal cause hid a substitution of place.</li>
+<li>One expectation failed: Dutch comes out as tonal because of two dialect inventories, and a flag was meant to mark this, but the source dataset files those inventories under the language-level code, so the flag could not detect it (<a href="limits.html">Limits</a>, section 5).</li>
+</ul>
+<p><strong>x1c — scope of the flags, and Cia-Cia.</strong> Dialect flags had been attached to phoneme inventories only, not to wordlists or WALS values; this was fixed (104 rows newly flagged). Cia-Cia's tone had been entered as "none"; since the source describes stress and does not state that there is no tone, it was lowered to unconfirmed.</p>
+<p>One of the x1b expectations ("about twenty-one"; the result was 20) had no tolerance fixed in advance.</p>
+<p>Counts by category moved as follows from x1 to x1c (θ 0.95). The category names of x1 are given in today's names.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Version</th>
+<th><code class="cat c-current">current</code></th>
+<th><code class="cat c-letters">letters</code></th>
+<th><code class="cat c-syllable">syllable</code></th>
+<th><code class="cat c-outside">outside</code></th>
+<th>All three layers present, undetermined because of tone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x1</td>
+<td>50</td>
+<td>196</td>
+<td>457</td>
+<td>12</td>
+<td>14</td>
+</tr>
+<tr>
+<td>x1a</td>
+<td>50</td>
+<td>196</td>
+<td>456</td>
+<td>10</td>
+<td>17</td>
+</tr>
+<tr>
+<td>x1b, x1c</td>
+<td>48</td>
+<td>198</td>
+<td>456</td>
+<td>10</td>
+<td>17</td>
+</tr>
+</tbody>
+</table></div>
+<h2>4. Independent verification</h2>
+<p>Another AI model was given the source data, the definition documents and the table to be checked — and no account of how the table was made — and asked to recompute the values from the same source data. This was done twice.</p>
+<ul>
+<li><strong>Round 1 (x1a).</strong> The tone layer (apart from the one row entered by hand) and the categories matched in full. The letter layer was checked on a sample of 40 languages, which is where the defects above were found. The syllable layer was checked on a sample of 20 languages and 300 words, with no mismatch. The outputs of the earlier versions were also confirmed to be reproduced byte for byte by the same tool.</li>
+<li><strong>Round 2 (x1b).</strong> The consonant and vowel values, the vowel features and the categories matched the independent computation in all 3,886 rows. The syllable and tone layers were confirmed to be unchanged from x1a in every cell (the whole syllable layer was not independently recomputed). The Cia-Cia row was recomputed from the literature and the wordlist and matched. The remaining points were the scope of the dialect flags, the basis of Cia-Cia's tone, and a number of sentences that needed narrowing; x1c fixes the first two. The flags newly attached in x1c are identical to the expected values the verifier had computed beforehand.</li>
+</ul>
+<p>What this verification did not establish:</p>
+<ul>
+<li>Whether the assignments that send a sound absent from the mapping table to "the nearest slot" are phonetically right was not verified. What was verified is that the computation follows the stated rules.</li>
+<li>Whether the values match the actual sound system of each language was compared against the published literature for thirty languages only (14 matched, 13 partly, 3 did not). Of the mismatches found there, vowel length in Japanese and Finnish and tone in Dutch are described above.</li>
+<li>The verifier was not given any account of the work, but reported, in both rounds, having opened one general rules document of the working environment (and, in round 1, that one bytecode cache file of the tool, outside its results folder, had been updated). The verification is not described as fully blind.</li>
+<li>The verifier itself noted that it could not confirm the exact version of the model used.</li>
+</ul>
+<h2>5. Using values from earlier versions</h2>
+<p>This repository carries only the table of exploratory edition 1. The tool keeps the branches that rebuild earlier versions (<code>--version v1</code>, <code>v2</code>, <code>x1</code>, <code>x1a</code>, <code>x1b</code>). Of these, the consonant values of v1, v2, x1 and x1a contain the ç defect.</p></main><footer>What Hangul writes and what it misses · Exploratory edition 1 · Built 2026-11-14 · <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a><br>Source data: PHOIBLE, WALS, Lexibank, Glottolog, ABVD (all CC BY 4.0). Text CC BY-NC 4.0; table CC BY 4.0; tool MIT.</footer></body></html>

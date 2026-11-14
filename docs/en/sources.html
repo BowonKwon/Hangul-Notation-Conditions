@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sources — What Hangul writes and what it misses</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css"></head><body class="p-sources"><header><div class="top"><a class="site" href="index.html">What Hangul writes and what it misses</a><span class="lang"><a href="../ko/sources.html">한국어</a><a href="../en/sources.html" class="on">English</a></span></div><nav><a href="index.html">Home</a><a href="method.html">Method</a><a href="results.html">Results</a><a href="table.html">Table</a><a href="record.html">Record</a><a href="limits.html">Limits</a><a href="sources.html" class="on">Sources</a></nav></header><main><h1>Sources</h1><p class="sub">Source data, the notation, earlier work</p><h2>1. Five source datasets</h2>
+<p>All are published under CC BY 4.0. They were obtained at pinned releases and commits; the SHA-256 hashes of the files used are in <code>data/SOURCES.md</code> in the repository. The source data themselves are not redistributed here. When you use this table, please credit these datasets as well. The notes accompanying WALS, Lexibank, Glottolog and ABVD ask that the release used also be cited by its DOI. This edition does not give those DOIs; when citing, please check the release page of each repository. The "version used" in the table records how the files were obtained; that the files received are identical to that release cannot be proven from the material in this repository alone. The files actually used are fixed by their hashes.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Version used</th>
+<th>Used for</th>
+<th>Citation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PHOIBLE</strong></td>
+<td>CLDF repository <code>cldf-datasets/phoible</code>, commit of 2025-04-10 (<code>5c477f1</code>)</td>
+<td>Phoneme inventories (letter layer), tone counts</td>
+<td>As instructed at <a href="https://phoible.org/">phoible.org</a></td>
+</tr>
+<tr>
+<td><strong>WALS</strong></td>
+<td>CLDF <code>v2020.6</code></td>
+<td>13A tone, 12A syllable structure</td>
+<td>Dryer, Matthew S. &amp; Haspelmath, Martin (eds.) 2013. <em>The World Atlas of Language Structures Online.</em> Leipzig: Max Planck Institute for Evolutionary Anthropology. https://wals.info</td>
+</tr>
+<tr>
+<td><strong>Lexibank</strong></td>
+<td><code>lexibank-analysed</code> <code>v2.2</code></td>
+<td>Wordlists (syllable layer)</td>
+<td>Blum, Frederic; Barrientos, Carlos; Englisch, Johannes; Forkel, Robert; Gray, Russell D.; Greenhill, Simon J.; Rzymski, Christoph and List, Johann-Mattis (2025): <em>Lexibank²: Precomputed Features for Large-Scale Lexical Data</em> [Dataset, Version 2.0]. Leipzig: Max Planck Institute for Evolutionary Anthropology.</td>
+</tr>
+<tr>
+<td><strong>Glottolog</strong></td>
+<td>CLDF <code>v5.4</code></td>
+<td>Language codes, names and families; the dialect/language distinction; endangerment status</td>
+<td>Hammarström, Harald &amp; Forkel, Robert &amp; Haspelmath, Martin &amp; Bank, Sebastian. 2026. <em>Glottolog 5.4.</em> Leipzig: Max Planck Institute for Evolutionary Anthropology. https://glottolog.org</td>
+</tr>
+<tr>
+<td><strong>ABVD</strong></td>
+<td><code>lexibank/abvd</code> <code>v0.3</code></td>
+<td>Cia-Cia wordlist (Wasambua dialect)</td>
+<td>Greenhill, S.J., Blust. R, &amp; Gray, R.D. (2008). The Austronesian Basic Vocabulary Database: From Bioinformatics to Lexomics. <em>Evolutionary Bioinformatics</em>, 4: 271–283.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Lexibank aggregates 134 wordlist datasets. The first part of the <code>lexibank_variety</code> column names the dataset. Citations for each are in Lexibank's <code>contributions.csv</code>. This repository does not carry the wordlists, only the proportions counted from them.</p>
+<p>PHOIBLE inventories come from several sources (the <code>sources</code> column: SPA, UPSID, AA, PH, GM, RA, SAPHON, UZ, EA, ER). Tone counts were read only from inventories of the six sources that record tone (SPA, AA, PH, GM, RA, UZ).</p>
+<h2>2. The notation</h2>
+<ul>
+<li>Sejong notation, edition 3.2 — https://bowonkwon.github.io/Legal-Language-Handbooks/sejong/ (in Korean). The list of shapes, the rules for finals and side dots, and the per-language mapping tables with their sources are there. The letter-slot tables inside the computation tool are a classification built from the common rows of the mapping table published by that site (<code>data/mapping.csv</code>, CC BY 4.0): where a shape depends on context one is chosen, and series written by rule and the processing tables are added.</li>
+</ul>
+<h2>3. The row entered by hand</h2>
+<ul>
+<li>Havens, Emily Paige. 2024. <em>A Phonological Sketch of Ciacia, with Implications for Orthography.</em> MA thesis, Dallas International University. — Consonant inventory of Cia-Cia, Bahari dialect (Table 9, p. 44), vowels, and the description of stress (p. 60).</li>
+</ul>
+<h2>4. Example on the Limits page</h2>
+<ul>
+<li>Heath, Jeffrey. 2023. <em>A Grammar of Kelenga (Hainyaxo), Bozo language of Mali.</em> Language Description Heritage Library. — Vowels, length and nasality (p. 7), tones (p. 8), syllables (p. 18).</li>
+</ul>
+<h2>5. Earlier work</h2>
+<p>A study that puts a number on how far a language can be written in Hangul already exists.</p>
+<ul>
+<li>Jeon, Kwang-jin [전광진]. 2009. 타이완 원주민 언어에 대한 한글 서사법 개발 연구 [A study on developing Hangul writing systems for the indigenous languages of Taiwan — title translated here]. <em>中語中文學</em> 45: 351–388. 韓國中語中文學會.</li>
+</ul>
+<p>The paper gives a "Hangul writing adaptability" figure for ten indigenous languages of Taiwan: for initial consonants, final consonants and vowels, the proportion of phonemes that can be written in Hangul under four stated principles, plus syllable structure (80% where there is a constraint such as consonant clusters), averaged as a simple mean of the four (p. 360, note 15). The ten languages range from 66% to 88%, and the table's mean cell reads 71% (p. 382, Table 2; averaging the ten values again gives 77.9%).</p>
+<p>It differs from this table in three ways.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th></th>
+<th>Jeon 2009</th>
+<th>This table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is counted</td>
+<td>The proportion of phonemes close enough in sound to a Hangul letter to be written</td>
+<td>The number of distinct sounds listed in an inventory that merge into a shared slot in this classification</td>
+</tr>
+<tr>
+<td>Syllables</td>
+<td>80% if the syllable types pose a constraint, 100% otherwise</td>
+<td>The share of syllables in a wordlist that fit the frame</td>
+</tr>
+<tr>
+<td>Aggregation</td>
+<td>Mean of four values, then an order</td>
+<td>Each layer reported separately, no order</td>
+</tr>
+</tbody>
+</table></div>
+<p>Because different things are counted, the two sets of values cannot be compared to say that one is right.</p>
+<p>A later paper by the same author was also consulted.</p>
+<ul>
+<li>Jeon, Kwang-jin [전광진]. 2018. 타이완 원주민족 이따알어 한글 서사 방안 [Hangeul Writing System for Atayal Language in Taiwan — the paper's own English title]. <em>中語中文學</em> 74: 83–116.</li>
+</ul>
+<h2>6. Licenses</h2>
+<ul>
+<li>Text (the pages of this site): CC BY-NC 4.0.</li>
+<li>Table and summary data (<code>data/</code>): CC BY 4.0.</li>
+<li>Computation tool (<code>code/</code>): MIT.</li>
+<li>The works and source data cited belong to their authors and are not covered by these licenses.</li>
+</ul>
+<p>The full wording is in <code>LICENSE.md</code> in the repository.</p>
+<h2>7. How to cite</h2>
+<p>What Hangul writes and what it misses: a formal-condition table of 3,886 language units, exploratory edition 1 (2026). https://bowonkwon.github.io/Hangul-Notation-Conditions/</p></main><footer>What Hangul writes and what it misses · Exploratory edition 1 · Built 2026-11-14 · <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a><br>Source data: PHOIBLE, WALS, Lexibank, Glottolog, ABVD (all CC BY 4.0). Text CC BY-NC 4.0; table CC BY 4.0; tool MIT.</footer></body></html>

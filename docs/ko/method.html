@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>방법 — 한글로 적으면 무엇이 남고 무엇이 빠지나</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css"></head><body class="p-method"><header><div class="top"><a class="site" href="index.html">한글로 적으면 무엇이 남고 무엇이 빠지나</a><span class="lang"><a href="../ko/method.html" class="on">한국어</a><a href="../en/method.html">English</a></span></div><nav><a href="index.html">첫 면</a><a href="method.html" class="on">방법</a><a href="results.html">결과</a><a href="table.html">표</a><a href="record.html">경과</a><a href="limits.html">한계</a><a href="sources.html">출처</a></nav></header><main><h1>방법</h1><p class="sub">세 층을 어떻게 셌나</p><h2>한 행의 단위</h2>
+<p>표의 한 행은 원자료(PHOIBLE · Lexibank · WALS)가 Glottolog 코드 하나에 붙인 자료를 모은 것이다. Glottolog 가 방언으로 분류한 코드의 자료는 그 언어의 행으로 올렸다. 3,886행 가운데 3,843행은 Glottolog 가 언어로 분류한 단위다. 42행은 Glottolog 가 여러 언어의 묶음(어족이나 하위 어군)으로 분류한 코드에 자료가 붙어 있는 것이다(Albanian · Buriat · Dinka 등 — 40행은 <code class="cat c-partial">partial</code>, 2행은 <code class="cat c-syllable">syllable</code>). 1행(<code>l1</code>)은 PHOIBLE 목록 하나의 코드가 Glottolog 에 없어 이름과 계통이 비어 있다. 이 사이트에서 「언어」는 이 표의 한 행을 가리킨다.</p>
+<h2>1. 기준 규약</h2>
+<p><a href="https://bowonkwon.github.io/Legal-Language-Handbooks/sejong/">세종 표기 판 3.2</a>의 규약을 고정된 기준으로 썼다.</p>
+<ul>
+<li><strong>글자:</strong> 그 사이트의 닫힌 목록에 있는 꼴만 쓰고 새 꼴을 만들지 않는다(목록과 근거는 그 사이트에 있다). 이 표의 계산이 쓰는 것은 그 대응표의 자음 꼴과, 한글 단모음 글자 열 · ㆍ 다.</li>
+<li><strong>음절:</strong> 초성 하나 + 중성 + 받침 하나. 받침은 일곱이고, 소리로는 끝소리 p · t · k · m · n · ŋ · l 만 받침이 된다.</li>
+<li><strong>성조:</strong> 방점 세 값(없음 · 한 점 · 두 점)에 음절 끝의 작은 ㆆ 유무를 곱한 여섯 칸.</li>
+</ul>
+<p>이 규약을 달리 잡으면 표의 값이 바뀐다. 이 표는 「이 규약으로 적을 때」의 표다.</p>
+<h2>2. 글자 층</h2>
+<p><strong>자료:</strong> <a href="sources.html">PHOIBLE</a>의 음운 목록(주변 음소로 표시된 것은 뺀다). 한 언어에 목록이 여럿이면 목록마다 따로 센다.</p>
+<p><strong>자음.</strong> 목록의 자음마다 규약의 어느 칸에 들어가는지를 정한다.</p>
+<ol>
+<li>규약의 대응표에 있는 소리는 그 꼴의 칸. 다만 s 에 평음과 긴장음(또는 유기음) 두 계열이 있으면 먼저 ㅅ · ㅆ 두 칸에 나누고, 그 뒤 s 와 ɕ 가 함께 있는 목록에서 부호 없는 s 가 ㅅ 칸에 있으면 그것을 ᄼ 칸으로 옮긴다.</li>
+<li>파열음 · 파찰음의 후두 계열은 조음 위치마다 세 칸에 넣는다 — 유기음, 유성음, 무기 무성음. 유성 계열이 없고 긴장음 계열이 있는 언어(한국어 꼴)는 무기 무성음을 유성음 칸에, 긴장음을 무기 무성음 칸에 넣는다. 방출음은 무기 무성음 칸, 숨 섞인 유성음과 내파음은 유성음 칸으로 간다.</li>
+<li>구개음화 · 원순화 · 긴 자음 · 앞비음 자음은 꼴이 아니라 규칙으로 적는 것으로 보고 따로 구별한다.</li>
+<li>대응표에 없는 소리 가운데 도구의 처리표에 올린 것은 가장 가까운 칸으로 보낸다(권설 · 구개 · 목젖 · 인두 소리, 설측 마찰음, 여러 가지 r 등). 처리표에도 없는 기호는 칸 없음(<code>OTHER</code>)으로 센다.</li>
+<li>흡착음과, 가까운 칸에도 꼴이 없는 소리는 「칸 없음」이다.</li>
+</ol>
+<p><strong>K_c</strong> = 같은 칸에 들어간 자음 무리마다 (무리의 크기 − 1)을 더한 수 + 칸 없는 자음의 수. 음운 목록에 적힌 자음 가운데 이 분류에서 서로 구별되지 않는 것의 수다(치음과 치조음의 구별 같은 조음 위치의 세부 부호는 무시한다).</p>
+<p><strong>K_c 유형.</strong> 합쳐진 무리마다 까닭을 붙인다. 한 무리에 까닭이 둘이면 <code>LAR+SUB</code> 처럼 잇는다.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>코드</th>
+<th>뜻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LAR</code></td>
+<td>무리 안의 차이가 후두 계열에 있다 — 방출음 · 내파음 · 숨 섞인 소리 · 긴장음 · 삐걱거리는 소리 · 무성 부호가 붙은 소리가 다른 계열과 한 칸에 들었다</td>
+</tr>
+<tr>
+<td><code>SUB</code></td>
+<td>대응표에 없는 소리를 가까운 칸으로 보낸 것</td>
+</tr>
+<tr>
+<td><code>SAME</code></td>
+<td>규약이 처음부터 한 꼴에 둔 두 소리가 그 언어에서는 대립한다</td>
+</tr>
+<tr>
+<td><code>CLICK</code></td>
+<td>흡착음</td>
+</tr>
+<tr>
+<td><code>NOGLYPH</code></td>
+<td>가까운 칸에도 꼴이 없다(유성 권설 파찰음)</td>
+</tr>
+<tr>
+<td><code>OTHER</code></td>
+<td>처리표에 없는 기호</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>모음.</strong> 단모음의 음질을 한글 단모음 글자 열과 ㆍ 에 대응시킨다. <strong>이중모음, 음절을 이루지 않는 모음 요소, 처리표에 없는 기호는 세지 않는다</strong>(PHOIBLE 의 모음 분절 31,055개 가운데 1,950개, 254개 언어). <strong>K_v</strong> = 같은 글자에 든 음질 무리마다 (무리의 크기 − 1)을 더한 수 + 글자가 없는 음질의 수. 같은 글자에 든 두 음질이 한쪽은 긴 것만, 다른 쪽은 짧은 것만 적혀 있으면(예: i 와 ɪː) 합류가 아니라 길이 대립으로 센다.</p>
+<p><strong>모음 자질.</strong> 길이 · 비음 · 발성(긴장, 혀뿌리, 숨 섞임 등)의 대립은 이 규약에 적을 장치가 없다. 한 언어의 목록 가운데 <strong>하나라도</strong> 그 자질을 적고 있으면 자질이 있다고 본다. 길이는 같은 음질에 긴 것과 짧은 것이 함께 있을 때(또는 위의 경우), 비음 · 발성은 그 표지가 붙은 모음이 하나라도 있을 때 적은 것으로 센다. 표에는 <code>length(1/3)</code> 처럼 「그 자질을 적은 목록 수 / 모음을 센 목록 수」를 함께 적는다. 전설 원순 모음이 있는지를 적는 <code>VF4</code> 열만은 목록의 절반 이상에 있을 때 참이다.</p>
+<p><strong>여러 목록을 한 값으로.</strong> K_c · K_v 는 목록들의 중앙값과 범위(최소 · 최대)를 적는다. K_c 유형은 K_c 가 중앙값에 가장 가까운 목록 하나의 것이다(같으면 목록 번호가 작은 것).</p>
+<p><strong>글자 층의 조건(<code>letters_ok</code>):</strong> K_c 의 중앙값이 0, K_v 의 중앙값이 0, 모음 자질이 없음.</p>
+<h2>3. 음절 층</h2>
+<p><strong>자료:</strong> <a href="sources.html">Lexibank</a>의 낱말 목록. Lexibank 가 언어마다 골라 둔 목록 가운데 소리 표기가 붙은 낱말이 가장 많은 것 하나를 쓴다. 낱말은 분절음 열과 음절 위치 표시가 붙은 꼴로 들어 있다.</p>
+<p><strong>음절 나누기.</strong> 초성 끝의 활음(j · w 등)은 초성 자음으로 세지 않는다(「콰」 「쳐」 꼴로 적히는 자리). 낱말 가운데의 초성 연쇄가 그 낱말 목록의 낱말 첫머리에 나오는 연쇄가 아니면, 왼쪽 자음부터 하나씩 앞 음절의 끝소리로 넘긴다(남은 것이 첫머리에 나오는 연쇄이거나 자음 하나가 되면 멈춘다). 끝소리는 부호를 떼고 처리표의 가장 가까운 기호로 바꾼 뒤 판정한다(글자 층의 후두 계열 규칙은 쓰지 않는다). 끝소리 자리의 활음은 끝 자음으로 세지 않는다.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>값</th>
+<th>정의</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>S1c</code></td>
+<td>「초성 자음 0~1 + 핵 + 끝 자음 0~1, 끝 자음은 p · t · k · m · n · ŋ · l」인 음절의 비율</td>
+</tr>
+<tr>
+<td><code>S1x</code></td>
+<td>「초성 자음 0~2 + 핵 + 끝 자음 0~2, 끝 자음의 종류 제한 없음」인 음절의 비율. 초성 글자 둘 · 받침 글자 둘까지를 허용한 가상의 틀이다. 끝소리의 종류를 가리지 않으므로, 그 자음을 실제로 받침으로 적어 구별할 수 있는지는 보지 않는다</td>
+</tr>
+<tr>
+<td><code>S2</code></td>
+<td>초성 자음이 둘 이상인 음절의 비율</td>
+</tr>
+<tr>
+<td><code>S3</code></td>
+<td>앞비음 자음이 초성인 음절의 비율</td>
+</tr>
+<tr>
+<td><code>S4a</code></td>
+<td>첫 음절의 초성 자음이 둘 이상인 낱말의 비율(위의 음절 나누기를 거친 뒤)</td>
+</tr>
+<tr>
+<td><code>S4b</code></td>
+<td>전체 낱말 가운데, 초성 연쇄로 시작하지 않으면서 첫소리가 앞비음 자음 · ŋ · l(그 낱말 목록에 r 류의 소리도 나올 때)인 낱말의 비율</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>S1c</code> · <code>S1x</code> 의 구간은 낱말을 2,000번 다시 뽑아 낸 95% 구간이다.</p>
+<h2>4. 성조 층</h2>
+<p><strong>자료:</strong> PHOIBLE 목록의 성조 수(성조를 적는 여섯 원천의 목록만)와 <a href="sources.html">WALS</a> 13A(성조 없음 · 단순 · 복잡).</p>
+<p>PHOIBLE 목록이 성조를 0 으로 적은 것은 「성조가 없다」와 「적지 않았다」를 가를 수 없다. WALS 가 성조 언어라고 한 언어의 목록 가운데 상당수가 0 으로 적혀 있다(<a href="record.html">경과</a> 3절). 그래서 다음 순서로 정한다.</p>
+<ol>
+<li>성조 수가 양수인 목록이 하나라도 있으면 성조 언어다. 양수인 값들의 중앙값과 범위를 적는다. 수준은 1~3 이 <code>T1</code>, 4~6 이 <code>T2</code>, 7 이상이 <code>T3</code>. 최솟값과 최댓값의 수준이 다르면 <code>T1~T2</code> 처럼 범위로 적는다.</li>
+<li>1 이 아니고 WALS 가 「단순」이면 <code>T1</code>, 「복잡」이면 <code>T2+</code>(수를 모름).</li>
+<li>1 · 2 가 아니고 WALS 가 「없음」이면 <code>T0</code>.</li>
+<li>1~3 이 아니고 PHOIBLE 목록이 모두 0 이면 <strong><code>T0?</code></strong> — 성조가 없다는 근거가 약한 것.</li>
+<li>그 밖은 빈칸.</li>
+</ol>
+<p>방점 여섯 칸에 드는 수준은 <code>T1</code> · <code>T2</code> · <code>T1~T2</code> 다. <code>T0</code> · <code>T0?</code> 는 성조 장치가 필요 없는 것으로 다룬다. <strong><code>T0?</code> 는 성조의 수를 모르는 채로 통과시킨 것이다.</strong> 문헌에서 직접 입력한 찌아찌아어 행은 이 순서를 거치지 않고 <code>T0?</code> 로 두었다(<a href="limits.html">한계</a> 9).</p>
+<h2>5. 갈래</h2>
+<p><code class="cat c-partial">partial</code> 을 뺀 갈래는 세 층의 값이 모두 있는 언어에만 붙는다. 음절 기준 θ 는 0.95 이고(소수 넷째 자리로 반올림한 값에 적용), 0.90 과 0.99 로도 세어 <a href="results.html">결과</a>에 함께 실었다.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>갈래</th>
+<th>조건</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="cat c-partial">partial</code></td>
+<td>세 층 가운데 빠진 것이 있음</td>
+</tr>
+<tr>
+<td><code class="cat c-tone-unknown">tone-unknown</code></td>
+<td>성조가 <code>T2+</code></td>
+</tr>
+<tr>
+<td><code class="cat c-tone-range">tone-range</code></td>
+<td>성조 수준의 범위가 <code>T3</code> 을 포함(<code>T2~T3</code> · <code>T1~T3</code>)</td>
+</tr>
+<tr>
+<td><code class="cat c-outside">outside</code></td>
+<td><code>S1x</code> &lt; θ 이거나 성조가 <code>T3</code></td>
+</tr>
+<tr>
+<td><code class="cat c-syllable">syllable</code></td>
+<td>위가 아니고 <code>S1c</code> &lt; θ</td>
+</tr>
+<tr>
+<td><code class="cat c-current">current</code></td>
+<td>위가 아니고 글자 층의 조건을 충족</td>
+</tr>
+<tr>
+<td><code class="cat c-letters">letters</code></td>
+<td>위가 아니고 글자 층의 조건을 충족하지 못함</td>
+</tr>
+</tbody>
+</table></div>
+<p>위에서부터 차례로 적용한다. 갈래는 「어떤 종류의 조건이 걸리는가」의 서술이다. <code class="cat c-syllable">syllable</code> 인 언어에도 글자 층의 합류가 있을 수 있고(그 수는 <code>Kc</code> · <code>Kv</code> 열에 있다), <code class="cat c-letters">letters</code> 가 <code class="cat c-syllable">syllable</code> 보다 한글에 가깝다는 뜻이 아니다.</p>
+<h2>6. 표시</h2>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>표시</th>
+<th>뜻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>single-inventory</code></td>
+<td>음운 목록이 하나뿐(찌아찌아어 행은 문헌 하나를 목록 하나로 셌다)</td>
+</tr>
+<tr>
+<td><code>small-sample</code></td>
+<td>낱말이 100개 미만</td>
+</tr>
+<tr>
+<td><code>tone-unconfirmed</code></td>
+<td>성조가 <code>T0?</code></td>
+</tr>
+<tr>
+<td><code>tone-from-dialects</code></td>
+<td>성조가 있다는 근거가 방언 단위의 자료에서만 왔다</td>
+</tr>
+<tr>
+<td><code>dialect-merged</code></td>
+<td>방언 단위의 자료(음운 목록 · 낱말 목록 · WALS 값)가 언어의 행에 합쳐졌다</td>
+</tr>
+<tr>
+<td><code>handcoded</code></td>
+<td>공개 데이터베이스가 아니라 문헌에서 직접 입력한 행(찌아찌아어)</td>
+</tr>
+<tr>
+<td><code>composite-varieties</code></td>
+<td>서로 다른 방언의 자료를 합친 행(찌아찌아어)</td>
+</tr>
+</tbody>
+</table></div>
+<p>방언은 <a href="sources.html">Glottolog</a>의 분류로 알아본다. 원자료가 방언의 목록을 언어 단위의 코드로 올려 둔 경우는 이 표시로 가려내지 못한다(<a href="limits.html">한계</a> 5).</p>
+<h2>7. 재현</h2>
+<p>계산 도구와 원자료를 받는 법은 <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">저장소</a>의 <code>code/</code> 와 <code>data/SOURCES.md</code> 에 있다. 원자료는 판과 커밋을 고정했고 파일의 해시를 적어 두었다. 같은 도구로 다시 돌리면 표가 바이트 단위로 같게 나온다.</p></main><footer>한글로 적으면 무엇이 남고 무엇이 빠지나 · 탐색판 1 · 생성일 2026-11-14 · <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">GitHub</a> · 공개 자료 전체 <a href="https://bowonkwon.github.io/">bowonkwon.github.io</a><br>원자료: PHOIBLE · WALS · Lexibank · Glottolog · ABVD(모두 CC BY 4.0). 글 CC BY-NC 4.0 · 표 CC BY 4.0 · 도구 MIT.</footer></body></html>
