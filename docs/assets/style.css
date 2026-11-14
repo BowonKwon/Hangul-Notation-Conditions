@@ -24,17 +24,22 @@ footer{max-width:980px;margin:0 auto;padding:1.2rem 1.1rem 2.5rem;color:var(--mu
 header{border-top:4px solid var(--acc)}
 .p-index h1{font-size:2.1rem;margin-top:.8rem}.p-index .sub{font-size:1.05rem}
 .p-index main>p:first-of-type{font-size:1.08rem}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.7rem;margin:1.4rem 0}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(130px,100%),1fr));gap:.7rem;margin:1.4rem 0}
 .tile{background:#fff;border:1px solid var(--line);border-radius:8px;padding:.8rem .95rem}
 .tile b{display:block;font-size:1.75rem;font-weight:700;line-height:1.25;font-variant-numeric:tabular-nums;color:var(--fg)}
 .tile span{color:var(--mut);font-size:.86rem;line-height:1.45;display:block}
-ul.cards{list-style:none;padding:0;margin:1rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:.7rem}
+ul.cards{list-style:none;padding:0;margin:1rem 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));gap:.7rem}
 ul.cards li{background:#fff;border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:6px;padding:.75rem .95rem;margin:0;font-size:.94rem;line-height:1.65}
 ul.cards li>strong:first-child{display:block;margin-bottom:.25rem;font-size:1rem}
 .fig{background:#fff;border:1px solid var(--line);border-radius:8px;padding:1rem 1.05rem .85rem;margin:1.3rem 0}
 .fig h3{margin:0 0 .35rem;font-size:1rem;font-weight:700}
 .fig svg{display:block;width:100%;height:auto}
 .fig .cap{color:var(--mut);font-size:.86rem;margin:.6rem 0 0;line-height:1.6}
+.fig .lead{margin:.1rem 0 .7rem;font-size:.93rem;line-height:1.6}
+.keys{list-style:none;padding:0;margin:.2rem 0 .8rem;font-size:.86rem;color:var(--mut);line-height:1.55}.keys li{margin:.15rem 0;padding-left:1.1rem;text-indent:-1.1rem}
+.mtop small{display:block;color:var(--mut);font-size:.82rem;font-weight:400}.mtop .v small{text-align:right}.mtop>span:first-child{min-width:0}.mtop .v{flex:none}
+th code{word-break:normal;white-space:nowrap}.fig th{word-break:keep-all;overflow-wrap:normal}
+@media(max-width:600px){.fig svg.cat text{font-size:25px}.fig svg.map text{font-size:27px}}
 .legend{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;font-size:.86rem;color:var(--mut);margin:.2rem 0 .6rem}
 .sw{display:inline-block;width:.72rem;height:.72rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}.sw.dot{border-radius:50%}.sw.dot.sm{width:.5rem;height:.5rem}
 .mrow{margin:.5rem 0}.mtop{display:flex;justify-content:space-between;gap:1rem;font-size:.92rem}.mtop .v{font-variant-numeric:tabular-nums;font-weight:700}
