@@ -65,3 +65,14 @@ The name of the Cia-Cia row carries a Korean note meaning "hand-entered: Havens 
 
 The `l1` row comes from a PHOIBLE inventory whose code is not in Glottolog; its name and family are empty. 42 rows are codes that Glottolog classifies as groups of languages.
 `l1` 행은 PHOIBLE 목록 하나의 코드가 Glottolog 에 없어 이름과 계통이 비어 있다. 42행은 Glottolog 가 여러 언어의 묶음으로 분류한 코드다.
+
+## `map-points.tsv`
+
+The coordinates behind the map on the Results page: one line per row of the table, in the same order (3,886 lines, 6 columns). 결과 면 지도의 좌표 — 표의 행마다 한 줄, 같은 순서(3,886줄 · 6열).
+
+| Column · 열 | Meaning · 뜻 |
+|---|---|
+| `glottocode` · `name` | As in the table · 표와 같다 |
+| `latitude` · `longitude` | Glottolog `languages.csv` values, copied unchanged; empty if Glottolog has none · Glottolog 의 값 그대로, 없으면 빈칸 |
+| `layers` | `all3` = data in all three layers (dark dot) · 세 층 모두(짙은 점); `partial` = some layers only (light dot) · 일부 층만(옅은 점) |
+| `drawn` | `yes` = drawn · 그렸다; `no-coordinates` = Glottolog has no coordinates · 좌표 없음; `not-in-glottolog` = code not in Glottolog · Glottolog 에 없는 코드; `outside-latitude-range` = outside the map (78°N–58°S) · 지도 범위 밖 |

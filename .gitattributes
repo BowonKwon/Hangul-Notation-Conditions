@@ -1,0 +1,3 @@
+# Keep every file byte for byte (no line-ending conversion), so that the hashes in data/SOURCES.md hold in any clone.
+# 모든 파일을 줄 끝 변환 없이 바이트 그대로 둔다 — data/SOURCES.md 의 해시가 어느 사본에서나 맞도록.
+* -text

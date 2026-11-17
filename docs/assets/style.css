@@ -43,6 +43,11 @@ th code{word-break:normal;white-space:nowrap}.fig th{word-break:keep-all;overflo
 @media(max-width:600px){.fig svg.cat text{font-size:25px}.fig svg.map text{font-size:27px}}
 .legend{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;font-size:.86rem;color:var(--mut);margin:.2rem 0 .6rem}
 .sw{display:inline-block;width:.72rem;height:.72rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}.sw.dot{border-radius:50%}.sw.dot.sm{width:.5rem;height:.5rem}
+.sw.pt{width:1.1rem;height:.85rem;vertical-align:-2px}.legend .pn{color:var(--mut)}
+.sw.p-letters{background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.55) 0 2px,transparent 2px 5px)}
+.sw.p-syllable{background-image:radial-gradient(circle,rgba(255,255,255,.8) 1.3px,transparent 1.7px);background-size:5px 5px}
+.sw.p-outside{background-image:linear-gradient(rgba(255,255,255,.75) 1.4px,transparent 1.4px),linear-gradient(90deg,rgba(255,255,255,.75) 1.4px,transparent 1.4px);background-size:5px 5px;background-position:2px 2px}
+.sw.p-und{background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 2px,transparent 2px 5px)}
 .mrow{margin:.5rem 0}.mtop{display:flex;justify-content:space-between;gap:1rem;font-size:.92rem}.mtop .v{font-variant-numeric:tabular-nums;font-weight:700}
 .track{background:var(--soft);height:14px;border-radius:0 4px 4px 0;margin-top:.15rem}.bar{background:#2a78d6;height:14px;border-radius:0 4px 4px 0}
 code.cat::before{content:'';display:inline-block;width:.6rem;height:.6rem;border-radius:2px;margin-right:.32rem;background:var(--c,#c9ccd0)}

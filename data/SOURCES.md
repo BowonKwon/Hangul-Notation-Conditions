@@ -26,7 +26,15 @@ The versions above record how the files were obtained; that the files received a
 |---|---|
 | `hangul-conditions-ed1.tsv` | `3e50c67be1d41840df289564f8f987ef064c5d622a71d6443625519135d9f61d` |
 | `summary.json` | `c94deab0e8aa245e10b26f392774c84b2fafda7d228bba4b0a0e61e855a9bf52` |
+| `map-points.tsv` | `9f87c792ce384f49d8979a71fd37f6e13743be903d23531566e3b5a7a75fc674` |
 | `code/hangul_fit.py` | `86a1cf089484acc932640e7c147cf0b57c5d05d93fa6830cd65338c827176a66` |
 
 `python code/hangul_fit.py run --data DATA --out OUT --version x1c` writes `explore-axes.tsv` and `explore-summary.json`,
 byte-identical to the two data files above. 위 명령이 만드는 두 파일은 위의 두 데이터 파일과 바이트 단위로 같다.
+
+`map-points.tsv` (the coordinates behind the site's map) is written by the site generator, not by this command: for each row of the table it copies
+`Latitude` and `Longitude` from Glottolog's `languages.csv` unchanged. 지도의 좌표 표 `map-points.tsv` 는 위 명령이 아니라 사이트 생성기가
+만든다 — 표의 행마다 Glottolog `languages.csv` 의 `Latitude` · `Longitude` 를 바꾸지 않고 옮긴 것이다.
+
+The repository's `.gitattributes` (`* -text`) keeps every file byte for byte, so these hashes also hold for a fresh clone.
+저장소의 `.gitattributes`(`* -text`)가 모든 파일을 줄 끝 변환 없이 두므로, 새로 내려받은 사본에서도 위 해시가 맞는다.

@@ -12,6 +12,7 @@ The parts of the text in which the compiler holds rights are released under CC B
 Creative Commons Attribution 4.0 International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/
 
 The table is derived from PHOIBLE, WALS, Lexibank (lexibank-analysed), Glottolog and ABVD, all published under CC BY 4.0. Please credit those datasets as well (see the site's Sources page).
+The coordinates in `map-points.tsv` are Glottolog's values. `map-points.tsv` 의 좌표는 Glottolog 의 값이다.
 이 표는 PHOIBLE · WALS · Lexibank · Glottolog · ABVD(모두 CC BY 4.0)에서 만들었다. 쓸 때 그 자료들도 함께 밝혀 주기 바란다.
 
 ## Code · 도구 (`code/`, `docs/assets/table.js`)

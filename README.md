@@ -19,7 +19,7 @@ A table that counts, unit by unit and from public phonological data (PHOIBLE, WA
 ## 폴더 · Layout
 
 - `docs/` 사이트(GitHub Pages) · the site
-- `data/` 표 `hangul-conditions-ed1.tsv`(3,886행 · 34열), `summary.json`, 열 설명 `columns.md`, 원자료의 판과 해시 `SOURCES.md` · the table, a summary, the column guide, and the versions and hashes of the source data
+- `data/` 표 `hangul-conditions-ed1.tsv`(3,886행 · 34열), `summary.json`, 지도의 좌표 표 `map-points.tsv`, 열 설명 `columns.md`, 원자료의 판과 해시 `SOURCES.md` · the table, a summary, the coordinates behind the map, the column guide, and the versions and hashes of the source data
 - `code/` 계산 도구 · the computation tool
 
 ## 다시 만들기 · Reproducing
