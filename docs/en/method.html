@@ -1,6 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Method — What Hangul writes and what it misses</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css"></head><body class="p-method"><header><div class="top"><a class="site" href="index.html">What Hangul writes and what it misses</a><span class="lang"><a href="../ko/method.html">한국어</a><a href="../en/method.html" class="on">English</a><a class="hub" href="https://bowonkwon.github.io/en/">All public materials</a></span></div><nav><a href="index.html">Home</a><a href="method.html" class="on">Method</a><a href="results.html">Results</a><a href="table.html">Table</a><a href="record.html">Record</a><a href="limits.html">Limits</a><a href="sources.html">Sources</a></nav></header><main><h1>Method</h1><p class="sub">How the three layers are counted</p><h2>What a row is</h2>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Method — What Hangul writes and what it misses</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/style.css"></head><body class="p-method"><header><div class="top"><a class="site" href="index.html">What Hangul writes and what it misses</a><span class="lang"><a href="../ko/method.html">한국어</a><a href="../en/method.html" class="on">English</a><a class="hub" href="https://bowonkwon.github.io/en/">All public materials</a></span></div><nav><a href="index.html">Home</a><a href="method.html" class="on">Method</a><a href="results.html">Results</a><a href="table.html">Table</a><a href="record.html">Record</a><a href="limits.html">Limits</a><a href="sources.html">Sources</a></nav></header><main><h1>Method</h1><p class="sub">How the three layers are counted</p><nav class="toc" id="toc" aria-label="On this page"><b>On this page</b><ul><li><a href="#row-unit">What a row is</a></li><li><a href="#notation">1. Reference notation</a></li><li><a href="#letter-layer">2. Letter layer</a></li><li><a href="#syllable-layer">3. Syllable layer</a></li><li><a href="#tone-layer">4. Tone layer</a></li><li><a href="#categories">5. Categories</a></li><li><a href="#flags">6. Flags</a></li><li><a href="#reproducing">7. Reproducing</a></li></ul></nav><h2 id="row-unit">What a row is<a class="hx" href="#row-unit" aria-label="Link to the section ‘What a row is’">#</a></h2>
 <p>A row of the table gathers the data that the sources (PHOIBLE, Lexibank, WALS) attach to one Glottolog code. Data attached to a code that Glottolog classifies as a dialect are raised to the row of its language. Of the 3,886 rows, 3,843 are units that Glottolog classifies as languages. 42 are codes that Glottolog classifies as groups of languages (families or subgroups) to which the sources attach data (Albanian, Buriat, Dinka and others; 40 of these are <code class="cat c-partial">partial</code> and 2 are <code class="cat c-syllable">syllable</code>). One row (<code>l1</code>) comes from a PHOIBLE inventory whose code is not in Glottolog, so its name and family are empty. On this site, "language" means one row of this table.</p>
-<h2>1. Reference notation</h2>
+<h2 id="notation">1. Reference notation<a class="hx" href="#notation" aria-label="Link to the section ‘1. Reference notation’">#</a></h2>
 <p>The fixed reference is <a href="https://bowonkwon.github.io/Legal-Language-Handbooks/sejong/">Sejong notation, edition 3.2</a>.</p>
 <ul>
 <li><strong>Letters:</strong> only the shapes on that site's closed list, with no new shapes (the list and its sources are on that site). What this table's computation uses is the consonant shapes of that site's mapping table and the ten Hangul monophthong letters plus ㆍ.</li>
@@ -8,7 +8,7 @@
 <li><strong>Tone:</strong> three side-dot values (none, one dot, two dots) times the presence or absence of a small ㆆ at the end of the syllable, giving six slots.</li>
 </ul>
 <p>A different notation would give different values. This table describes writing <em>with this notation</em>.</p>
-<h2>2. Letter layer</h2>
+<h2 id="letter-layer">2. Letter layer<a class="hx" href="#letter-layer" aria-label="Link to the section ‘2. Letter layer’">#</a></h2>
 <p><strong>Data:</strong> phoneme inventories from <a href="sources.html">PHOIBLE</a>, excluding segments marked marginal. Where a language has several inventories, each is counted separately.</p>
 <p><strong>Consonants.</strong> Each consonant in an inventory is assigned to a slot of the notation.</p>
 <ol>
@@ -58,7 +58,7 @@
 <p><strong>Vowel features.</strong> The notation has no device for contrasts of length, nasality or phonation (tenseness, tongue root, breathiness and the like). A feature is counted as present if <strong>at least one</strong> inventory of the language records it. Length is recorded when the same quality appears both long and short (or in the case above); nasality and phonation are recorded when at least one vowel carries the mark. The table shows <code>length(1/3)</code>: inventories recording the feature / inventories whose vowels were counted. Only the <code>VF4</code> column (front rounded vowels) is true when at least half of the inventories have them.</p>
 <p><strong>From several inventories to one value.</strong> K_c and K_v are given as the median across inventories with the range (minimum, maximum). The K_c types are those of the single inventory whose K_c is closest to the median (the lower inventory number in a tie).</p>
 <p><strong>Letter-layer condition (<code>letters_ok</code>):</strong> median K_c is 0, median K_v is 0, and no vowel feature.</p>
-<h2>3. Syllable layer</h2>
+<h2 id="syllable-layer">3. Syllable layer<a class="hx" href="#syllable-layer" aria-label="Link to the section ‘3. Syllable layer’">#</a></h2>
 <p><strong>Data:</strong> wordlists from <a href="sources.html">Lexibank</a>. For each language, the list with the most sound-transcribed forms among those Lexibank preselects is used. Forms come as segment strings with a syllable-position label for each segment.</p>
 <p><strong>Syllabification.</strong> A glide (j, w and the like) at the end of an onset is not counted as an onset consonant (the position written as in 콰 or 쳐). If a word-medial onset cluster does not occur word-initially in that wordlist, its consonants are passed one at a time, from the left, to the preceding coda, stopping when what remains occurs word-initially or is a single consonant. Codas are stripped of diacritics and replaced by the nearest symbol in the processing table before they are judged (the laryngeal-series rules of the letter layer are not used). A glide in coda position is not counted as a coda consonant.</p>
 <div class="tw"><table>
@@ -96,7 +96,7 @@
 </tbody>
 </table></div>
 <p>The intervals for <code>S1c</code> and <code>S1x</code> are 95% intervals from 2,000 resamples of words.</p>
-<h2>4. Tone layer</h2>
+<h2 id="tone-layer">4. Tone layer<a class="hx" href="#tone-layer" aria-label="Link to the section ‘4. Tone layer’">#</a></h2>
 <p><strong>Data:</strong> tone counts in PHOIBLE inventories (only inventories from the six sources that record tone) and <a href="sources.html">WALS</a> feature 13A (no tones, simple, complex).</p>
 <p>A PHOIBLE inventory with a tone count of 0 cannot tell "no tone" from "not recorded": a considerable share of the inventories of languages that WALS codes as tonal have 0 (<a href="record.html">Record</a>, section 3). Tone is therefore decided in this order.</p>
 <ol>
@@ -107,7 +107,7 @@
 <li>Otherwise blank.</li>
 </ol>
 <p>The levels that fit the six tone slots are <code>T1</code>, <code>T2</code> and <code>T1~T2</code>. <code>T0</code> and <code>T0?</code> are treated as needing no tone device. <strong><code>T0?</code> passes without the number of tones being known.</strong> The Cia-Cia row, entered by hand from the literature, did not go through these steps and was set to <code>T0?</code> directly (<a href="limits.html">Limits</a>, section 9).</p>
-<h2>5. Categories</h2>
+<h2 id="categories">5. Categories<a class="hx" href="#categories" aria-label="Link to the section ‘5. Categories’">#</a></h2>
 <p>Categories other than <code class="cat c-partial">partial</code> are assigned only to languages with values in all three layers. The syllable cutoff θ is 0.95 (applied to values rounded to four decimals); counts at 0.90 and 0.99 are given on the <a href="results.html">Results</a> page.</p>
 <div class="tw"><table>
 <thead>
@@ -148,7 +148,7 @@
 </tbody>
 </table></div>
 <p>The rules are applied from the top. A category describes which kind of condition applies. A <code class="cat c-syllable">syllable</code> language may also have mergers in the letter layer (see the <code>Kc</code> and <code>Kv</code> columns), and <code class="cat c-letters">letters</code> does not mean "closer to Hangul" than <code class="cat c-syllable">syllable</code>.</p>
-<h2>6. Flags</h2>
+<h2 id="flags">6. Flags<a class="hx" href="#flags" aria-label="Link to the section ‘6. Flags’">#</a></h2>
 <div class="tw"><table>
 <thead>
 <tr>
@@ -188,5 +188,5 @@
 </tbody>
 </table></div>
 <p>Dialects are identified by the <a href="sources.html">Glottolog</a> classification. Where a source dataset files a dialect inventory under the language-level code, the flags cannot detect it (<a href="limits.html">Limits</a>, section 5).</p>
-<h2>7. Reproducing</h2>
-<p>The computation tool and instructions for obtaining the source data are in <code>code/</code> and <code>data/SOURCES.md</code> of the <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">repository</a>. The source data are pinned to releases and commits, with file hashes. Running the same tool again reproduces the table byte for byte.</p></main><footer>What Hangul writes and what it misses · Exploratory edition 1 · Built 2026-11-17 · <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a><br>Source data: PHOIBLE, WALS, Lexibank, Glottolog, ABVD (all CC BY 4.0). Text CC BY-NC 4.0; table CC BY 4.0; tool MIT.</footer></body></html>
+<h2 id="reproducing">7. Reproducing<a class="hx" href="#reproducing" aria-label="Link to the section ‘7. Reproducing’">#</a></h2>
+<p>The computation tool and instructions for obtaining the source data are in <code>code/</code> and <code>data/SOURCES.md</code> of the <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">repository</a>. The source data are pinned to releases and commits, with file hashes. Running the same tool again reproduces the table byte for byte.</p><a class="totoc" href="#toc" aria-label="Back to the section list of this page">↑ Contents</a></main><footer>What Hangul writes and what it misses · Exploratory edition 1 · site version 1.0.1 · Built 2026-11-18 · <a href="https://github.com/BowonKwon/Hangul-Notation-Conditions">GitHub</a> · All public materials <a href="https://bowonkwon.github.io/en/">bowonkwon.github.io</a><br>Source data: PHOIBLE, WALS, Lexibank, Glottolog, ABVD (all CC BY 4.0). Text CC BY-NC 4.0; table CC BY 4.0; tool MIT.</footer><script src="../assets/nav.js"></script></body></html>
