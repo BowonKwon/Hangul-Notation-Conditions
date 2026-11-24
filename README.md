@@ -4,7 +4,7 @@
 
 3,886개 언어 단위의 형식 조건표 — 탐색판 1 (2026. 11.) · A formal-condition table of 3,886 language units — exploratory edition 1 (November 2026)
 
-사이트 판 1.0.1 (2026-11-18). 표는 탐색판 1 그대로다. · Site version 1.0.1 (2026-11-18); the table is that of exploratory edition 1.
+사이트 판 1.0.2 (2026-11-24). 표는 탐색판 1 그대로다. · Site version 1.0.2 (2026-11-24); the table is that of exploratory edition 1.
 
 공개 음운 자료(PHOIBLE · WALS · Lexibank · Glottolog · ABVD)를 가지고, 한 언어의 소리를 [세종 표기 판 3.2](https://bowonkwon.github.io/Legal-Language-Handbooks/sejong/)의 규약으로 적을 때, 음운 목록에 적힌 소리들이 이 분류에서 같은 글자 칸으로 합쳐지는 자리와 글자가 없는 자리를 언어 단위마다 센 표다. 한 행은 원자료가 코드 하나로 묶은 단위이고, 3,886행 가운데 3,843행이 Glottolog 가 언어로 분류한 단위다(사이트의 「방법」 면).
 

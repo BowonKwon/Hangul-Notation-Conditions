@@ -37,10 +37,13 @@ ul.cards li>strong:first-child{display:block;margin-bottom:.25rem;font-size:1rem
 .fig svg{display:block;width:100%;height:auto}
 .fig .cap{color:var(--mut);font-size:.86rem;margin:.6rem 0 0;line-height:1.6}
 .fig .lead{margin:.1rem 0 .7rem;font-size:.93rem;line-height:1.6}
+.fig .axis{color:var(--mut);font-size:.8rem;margin:.35rem 0 .1rem;line-height:1.5}
 .keys{list-style:none;padding:0;margin:.2rem 0 .8rem;font-size:.86rem;color:var(--mut);line-height:1.55}.keys li{margin:.15rem 0;padding-left:1.1rem;text-indent:-1.1rem}
 .mtop small{display:block;color:var(--mut);font-size:.82rem;font-weight:400}.mtop .v small{text-align:right}.mtop>span:first-child{min-width:0}.mtop .v{flex:none}
 th code{word-break:normal;white-space:nowrap}.fig th{word-break:keep-all;overflow-wrap:normal}
-@media(max-width:600px){.fig svg.cat text{font-size:25px}.fig svg.map text{font-size:27px}}
+.fig svg.map .ln{display:none}
+@media(max-width:600px){.fig svg.cat text{font-size:25px}.fig svg.cat text[stroke]{stroke-width:3px}.fig svg.map .lw{display:none}.fig svg.map .ln{display:inline}}
+@media(max-width:360px){.fig svg.map .ln{font-size:40px}}
 .legend{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;font-size:.86rem;color:var(--mut);margin:.2rem 0 .6rem}
 .sw{display:inline-block;width:.72rem;height:.72rem;border-radius:2px;margin-right:.35rem;vertical-align:-1px}.sw.dot{border-radius:50%}.sw.dot.sm{width:.5rem;height:.5rem}
 .sw.pt{width:1.1rem;height:.85rem;vertical-align:-2px}.legend .pn{color:var(--mut)}
